@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3AA39F;
+  --color-accent: #EAEAEA;
+  --color-danger: #DC3545;
+  --color-bg-base: #F8FAF9;
+  --font-sans: "Inter", "Helvetica Neue", "Arial", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-base);
+    font-family: var(--font-sans);
+    color: #1f2937;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #111827;
+  }
+}
+
+.category-card {
+  transition: all 300ms;
+  border: 2px solid transparent;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border-radius: 1rem;
+}
+
+.category-card:hover {
+  border-color: var(--color-primary);
+  background-color: #F0F9F8;
+}
+
+.page-transition {
+  transition: opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
