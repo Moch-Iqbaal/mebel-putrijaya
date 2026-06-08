@@ -5,6 +5,8 @@ import { MapPin, Phone, Menu, X } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa6';
 import { STORE_INFO } from '../constants';
 
+const logoNav = new URL('../assets/logo/logo-nav.png', import.meta.url).href;
+
 interface LayoutProps {
   children: ReactNode;
 }
@@ -88,7 +90,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 className="flex items-center justify-center gap-2 w-full bg-primary text-white py-3 rounded-xl font-semibold text-sm hover:bg-primary/90 transition-colors"
               >
                 <FaWhatsapp size={18} />
-                Hubungi via WhatsApp
+                Klik Chat WhatsApp Sekarang 
               </a>
             </motion.div>
           </motion.div>
@@ -119,7 +121,8 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between h-18 items-center">
 
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-4">
+            <Link to="/" className="flex items-center gap-2">
+              <img src={logoNav} alt="Mebel Putri Jaya Logo" className="h-8 w-auto rounded-full object-contain" />
               <span className="text-2xl font-bold text-gray-800 tracking-tight">
                 MEBEL PUTRI JAYA®
               </span>
@@ -190,7 +193,9 @@ export default function Layout({ children }: LayoutProps) {
               <div className="text-xs text-gray-400 uppercase tracking-widest mb-1">Hubungi kontak Kami</div>
               <div className="text-2xl font-bold text-gray-800">+62 821 1309 2518</div>
             </div>
+            <div className="text-xs text-gray-400 uppercase tracking-widest mb-1">Ikuti Sosial Media Kami</div>
             <div className="flex gap-4">
+              
               <a href={`https://wa.me/6282113092518?text=${encodeURIComponent('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}`}
                 target="_blank" rel="noreferrer"
                 className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">

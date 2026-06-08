@@ -49,7 +49,7 @@ export default function Contact() {
                 className="inline-flex items-center gap-2 text-primary font-bold text-lg hover:underline"
               >
                 <MessageCircle size={20} />
-                Hubungi via WhatsApp
+               Klik untuk menghubungi via WhatsApp
               </a>
             </div>
           </motion.div>
@@ -71,6 +71,8 @@ export default function Contact() {
               </p>
             </div>
           </motion.div>
+
+      
         </div>
 
         {/* Map + Button */}
