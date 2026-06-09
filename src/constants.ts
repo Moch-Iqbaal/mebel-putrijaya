@@ -3,50 +3,82 @@ import { Product, FAQItem } from './types';
 export const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: 'Sofa Mewah Minimalis',
+    name: 'Sofa Abu-Abu Elegan ',
     category: 'Sofa',
-    price: 'Rp 4.500.000',
-    image: 'https://picsum.photos/seed/sofa1/800/600',
+    price: '',
+    image: `images/sofa/sofa5.jpeg`,
     description: 'Sofa nyaman dengan kain berkualitas tinggi, cocok untuk ruang tamu modern.'
   },
   {
     id: '2',
-    name: 'Kursi Jati Klasik',
-    category: 'Kursi',
+    name: 'Sofa Merah Maroon Mewah',
+    category: 'Sofa',
     price: 'Rp 1.200.000',
-    image: 'https://picsum.photos/seed/chair1/800/600',
-    description: 'Kursi dari kayu jati asli dengan ukiran halus khas Jepara.'
+    image: 'images/sofa/sofa6.jpeg',
+    description: 'Sofa merah maroon mewah dengan desain modern.'
   },
   {
     id: '3',
-    name: 'Meja Makan Solid',
-    category: 'Meja',
-    price: 'Rp 3.800.000',
-    image: 'https://picsum.photos/seed/table1/800/600',
-    description: 'Meja makan kokoh untuk 6 orang, tahan lama dan elegan.'
+    name: 'Sofa L-Shape Kombinasi Warna',
+    category: 'Sofa',
+    price: 'Rp 1.200.000',
+    image: 'images/sofa/sofa8.jpeg',
+    description: 'Sofa L-Shape dengan kombinasi warna yang menarik.'
   },
   {
     id: '4',
-    name: 'Lemari Pakaian 3 Pintu',
-    category: 'Lemari',
-    price: 'Rp 2.900.000',
-    image: 'https://picsum.photos/seed/wardrobe1/800/600',
-    description: 'Lemari luas dengan cermin besar dan banyak sekat penyimpanan.'
+    name: 'Kursi Jati Klasik',
+    category: 'Kursi',
+    price: 'Rp 1.200.000',
+    image: 'images/kursi/kursi1.jpeg',
+    description: 'Kursi dari kayu jati asli dengan ukiran halus khas Jepara.'
   },
   {
     id: '5',
-    name: 'Kasur Busa Orthopedic',
+    name: 'Kasur Busa Batik/Inoac/Dll',
     category: 'Kasur Busa',
-    price: 'Rp 1.500.000',
-    image: 'https://picsum.photos/seed/mattress1/800/600',
+    price: 'Rp 3.800.000',
+    image: 'images/kasur/kasur1.jpeg',
     description: 'Kasur busa yang mendukung kesehatan tulang punggung Anda.'
   },
   {
     id: '6',
+    name: 'Set Tempat Tidur ',
+    category: 'Kasur Busa',
+    price: 'Rp 2.900.000',
+    image: 'images/kasur/set-tempattidur.png',
+    description: 'Lemari luas dengan cermin besar dan banyak sekat penyimpanan.'
+  },
+  {
+    id: '7',
+    name: 'Lemari Kayu Minimalis',
+    category: 'Lemari',
+    price: 'Rp 2.900.000',
+    image: 'images/lemari/lemari-2.png',
+    description: 'Lemari luas dengan cermin besar dan banyak sekat penyimpanan.'
+  },
+  {
+    id: '8',
+    name: 'Lemari Besi Minimalis',
+    category: 'Lemari',
+    price: 'Rp 1.500.000',
+    image: 'images/lemari/lemari-besi.png',
+    description: 'Lemari luas dengan cermin besar dan banyak sekat penyimpanan.'
+  },
+  {
+    id: '9',
+    name: 'Meja Rias Kayu Jati',
+    category: 'Meja',
+    price: 'Rp 1.500.000',
+    image: 'images/meja/mejarias-1.png',
+    description: 'Meja rias kayu jati dengan desain minimalis.'
+  },
+  {
+    id: '10',
     name: 'Bantal Dacron Premium',
     category: 'Bantal',
     price: 'Rp 85.000',
-    image: 'https://picsum.photos/seed/pillow1/800/600',
+    image: 'images/bantal/bantal-1.png',
     description: 'Bantal empuk anti kempes untuk tidur yang lebih nyenyak.'
   }
 ];

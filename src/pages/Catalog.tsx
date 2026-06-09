@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageCircle, ShoppingBag } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { PRODUCTS, STORE_INFO } from '../constants';
 
 type Category = 'Semua' | 'Sofa' | 'Kursi' | 'Meja' | 'Lemari' | 'Kasur Busa' | 'Bantal';
@@ -15,8 +15,10 @@ export default function Catalog() {
     : PRODUCTS.filter(p => p.category === activeCategory);
 
   const handleBuy = (productName: string) => {
-    const message = encodeURIComponent(`${STORE_INFO.whatsappPrefix}${productName}`);
-    window.open(`https://wa.me/62${STORE_INFO.phone.substring(1)}?text=${message}`, '_blank');
+    const message = encodeURIComponent(
+      `Halo Pak, Saya tertarik dengan ${productName}. Boleh minta info harga dan ketersediaannya? 🙏`
+    );
+    window.open(`https://wa.me/6282113092518?text=${message}`, '_blank');
   };
 
   return (
@@ -82,13 +84,18 @@ export default function Catalog() {
                 </p>
                 
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-primary text-2xl font-bold">{product.price}</span>
-                  <button 
+                  <button
                     onClick={() => handleBuy(product.name)}
-                    className="flex items-center gap-3 bg-green-500 text-white px-6 py-4 rounded-xl hover:bg-green-600 transition-colors shadow-md hover:shadow-lg font-bold"
+                    className="text-green-600 text-xl font-semibold underline hover:text-green-700 transition-colors"
+                  >
+                    Hubungi kami untuk harga
+                  </button>
+                  <button
+                    onClick={() => handleBuy(product.name)}
+                    className="flex items-center gap-3 bg-green-500 text-white px-6 py-4 rounded-xl hover:bg-green-600 transition-colors shadow-md"
                   >
                     <MessageCircle size={20} />
-                    Beli
+                    Tanya
                   </button>
                 </div>
               </div>
