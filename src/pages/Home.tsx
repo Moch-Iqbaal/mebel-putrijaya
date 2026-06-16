@@ -105,8 +105,93 @@ export default function Home() {
     </motion.div>
   ))}
 </div>
+
+
       </section>
 
+
+      {/* Bagian Video Intro Mebel Putri Jaya */}
+      <section className="bg-white py-12 border-y border-accent">
+        <div className="max-w-4xl mx-auto px-4 md:px-8">
+
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <span className="text-primary font-semibold tracking-widest uppercase text-sm">
+              Kenali Kami Lebih Dekat
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+              Lihat Produk Kami Langsung
+            </h2>
+            <p className="text-gray-500 mt-2 text-base">
+              Kualitas terbaik, langsung dari showroom kami di Randudongkal.
+            </p>
+          </motion.div>
+
+          {/* Video Container */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="relative rounded-2xl overflow-hidden border border-accent shadow-lg"
+            style={{ aspectRatio: '16/9' }}
+          >
+            <video
+              src="/video/intro_mebel-putrijaya.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              poster=""
+              className="w-full h-full object-cover"
+              style={{ display: 'block' }}
+            />
+          </motion.div>
+
+          {/* Caption bawah video */}
+          <p className="text-center text-sm text-gray-400 mt-4 italic">
+            🛋️ 
+            <a href="https://maps.app.goo.gl/1xuvDZRqfh4kSwXt5" target="_blank">
+              Mebel Putri Jaya — Randudongkal, Pemalang
+            </a>
+          </p>
+
+        </div>
+      </section>
+
+        {/* Trust Banner */}
+        <div
+          className="relative overflow-hidden h-48 flex items-center justify-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gray-900/60" />
+
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative z-10 text-center"
+          >
+            <p className="text-white/70 text-sm uppercase tracking-[0.3em] mb-2">Mebel Putri Jaya - Randudongkal</p>
+            <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
+              Terpercaya sejak 2022
+            </h2>
+          </motion.div>
+        </div>
+
+              
       {/* Featured Service (Optional but kept for polish) */}
       <section className="bg-white py-16 border-y border-accent">
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -139,32 +224,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-        {/* Trust Banner */}
-        <div
-          className="relative overflow-hidden h-48 flex items-center justify-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gray-900/60" />
-
-          {/* Text */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative z-10 text-center"
-          >
-            <p className="text-white/70 text-sm uppercase tracking-[0.3em] mb-2">Mebel Putri Jaya - Randudongkal</p>
-            <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
-              Terpercaya sejak 2022
-            </h2>
-          </motion.div>
-        </div>
     </div>
   );
 }
