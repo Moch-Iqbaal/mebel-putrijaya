@@ -1,11 +1,13 @@
+'use client';
+
 import { ReactNode, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, Phone, Menu, X } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa6';
 import { STORE_INFO } from '../constants';
-
-const logoNav = new URL('../assets/logo/logo-nav.png', import.meta.url).href;
+import logoNav from '../assets/logo/logo-nav.png';
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,7 +16,7 @@ interface LayoutProps {
 // ─── Mobile Menu ─────────────────────────────────────────────────────────────
 
 function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  const location = useLocation();
+  const pathname = usePathname();
 
   const navItems = [
     { name: 'Beranda', path: '/' },
@@ -62,10 +64,10 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   transition={{ delay: i * 0.07, duration: 0.3 }}
                 >
                   <Link
-                    to={item.path}
+                    href={item.path}
                     onClick={onClose}
                     className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                      location.pathname === item.path
+                      pathname === item.path
                         ? 'bg-primary/10 text-primary font-semibold'
                         : 'text-gray-600 hover:bg-accent hover:text-primary'
                     }`}
@@ -103,7 +105,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 // ─── Main Layout ──────────────────────────────────────────────────────────────
 
 export default function Layout({ children }: LayoutProps) {
-  const location = useLocation();
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
@@ -121,8 +123,8 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between h-18 items-center">
 
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <img src={logoNav} alt="Mebel Putri Jaya Logo" className="h-8 w-auto rounded-full object-contain" />
+            <Link href="/" className="flex items-center gap-2">
+              <img src={logoNav.src} alt="Mebel Putri Jaya Logo" className="h-8 w-auto rounded-full object-contain" />
               <span className="text-2xl font-bold text-gray-800 tracking-tight">
                 MEBEL PUTRI JAYA®
               </span>
@@ -133,9 +135,9 @@ export default function Layout({ children }: LayoutProps) {
               {navItems.map((item) => (
                 <Link
                   key={item.path}
-                  to={item.path}
+                  href={item.path}
                   className={`text-base transition-colors hover:text-primary ${
-                    location.pathname === item.path ? 'text-primary' : 'text-gray-600'
+                    pathname === item.path ? 'text-primary' : 'text-gray-600'
                   }`}
                 >
                   {item.name}
@@ -161,7 +163,7 @@ export default function Layout({ children }: LayoutProps) {
       {/* Main Content */}
       <main className="flex-grow">
         <motion.div
-          key={location.pathname}
+          key={pathname}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}

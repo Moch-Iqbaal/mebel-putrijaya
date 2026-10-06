@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ChevronRight, Sofa, ArrowRight, Star, MessageCircle, Tag } from 'lucide-react';
 import { FAQS, STORE_INFO } from '../constants';
@@ -37,7 +39,7 @@ export default function Home() {
             
             <div className="flex flex-col gap-4">
               <Link 
-                to="/katalog" 
+                href="/katalog" 
                 className="bg-primary text-white text-center py-5 px-8 rounded-xl font-bold text-2xl shadow-lg hover:opacity-90 active:scale-95 transition-all"
               >
                 Lihat Katalog Terbaru
@@ -91,7 +93,7 @@ export default function Home() {
       transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.4, 0, 0.2, 1] }}
     >
       <Link
-        to="/katalog"
+        href="/katalog"
         className="category-card p-8 h-full flex flex-col items-center justify-center text-center gap-4"
       >
         <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-4xl">

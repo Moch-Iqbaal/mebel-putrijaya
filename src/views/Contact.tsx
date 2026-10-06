@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { MapPin, Phone, MessageCircle, Clock, Mail } from 'lucide-react';
 import { STORE_INFO } from '../constants';
