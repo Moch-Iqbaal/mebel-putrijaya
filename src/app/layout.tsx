@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
-  title: 'Mebel Putri Jaya Randudongkal - Terbaik Se-Indonesia #1',
+  title: 'Mebel Putri Jaya Randudongkal - Furniture Berkualitas untuk Hunian Anda',
   description:
     'Temukan koleksi mebel berkualitas dengan desain ramah keluarga. Melayani dengan hati sejak bertahun-tahun di Randudongkal.',
   icons: {
