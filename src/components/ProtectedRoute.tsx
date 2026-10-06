@@ -1,8 +1,11 @@
+'use client';
+
 import { ReactNode, useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { supabase } from '../lib/supabaseClients';
 
 export default function ProtectedRoute({ children }: { children: ReactNode }) {
+  const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -19,16 +22,16 @@ export default function ProtectedRoute({ children }: { children: ReactNode }) {
     return () => listener.subscription.unsubscribe();
   }, []);
 
-  if (loading) {
+  useEffect(() => {
+    if (!loading && !isAuthenticated) router.replace('/admin/login');
+  }, [loading, isAuthenticated, router]);
+
+  if (loading || !isAuthenticated) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bg-base">
         <p className="text-gray-400">Memuat...</p>
       </div>
     );
-  }
-
-  if (!isAuthenticated) {
-    return <Navigate to="/admin/login" replace />;
   }
 
   return <>{children}</>;

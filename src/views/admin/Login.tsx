@@ -1,5 +1,7 @@
+'use client';
+
 import { useState, FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { motion } from 'motion/react';
 import { Lock, Mail } from 'lucide-react';
 import { supabase } from '../../lib/supabaseClients';
@@ -9,7 +11,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
@@ -24,7 +26,7 @@ export default function Login() {
       return;
     }
 
-    navigate('/admin');
+    router.push('/admin');
   };
 
   return (
