@@ -1,12 +1,35 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
+import fs from 'fs';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import {defineConfig, loadEnv, type Plugin} from 'vite';
+import {siteOrigin} from './site.config';
+import {netlifyRedirects, robotsTxt, sitemapXml} from './siteFiles';
+
+function siteSeoFiles(): Plugin {
+  return {
+    name: 'site-seo-files',
+    apply: 'build',
+    buildStart() {
+      const publicDir = path.resolve(__dirname, 'public');
+      fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt());
+      fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml());
+      fs.writeFileSync(path.join(publicDir, '_redirects'), netlifyRedirects());
+    },
+    transformIndexHtml(html) {
+      const tag = `<link rel="canonical" href="${siteOrigin()}/" />`;
+      if (html.includes('rel="canonical"')) {
+        return html.replace(/<link\s+rel="canonical"[^>]*>/, tag);
+      }
+      return html.replace('</head>', `    ${tag}\n  </head>`);
+    },
+  };
+}
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), siteSeoFiles()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },

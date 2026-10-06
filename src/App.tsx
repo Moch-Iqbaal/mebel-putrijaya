@@ -4,6 +4,7 @@
  */
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Canonical from './components/Canonical';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
@@ -15,6 +16,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 export default function App() {
   return (
     <Router>
+      <Canonical />
       <Routes>
         {/* Halaman publik — pakai Layout (navbar + footer) */}
         <Route path="/" element={<Layout><Home /></Layout>} />
