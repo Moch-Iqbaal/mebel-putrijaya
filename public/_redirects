@@ -1,0 +1,4 @@
+# Netlify only. Vercel does not read this file.
+# 301 every path to the same path on the primary host.
+# The ! forces the redirect even when a file exists at that path.
+/*    https://mebel-putrijaya.vercel.app/:splat    301!
