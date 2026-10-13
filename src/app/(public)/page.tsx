@@ -1,11 +1,7 @@
 import Home from '../../views/Home';
-import { pageMetadata } from '../../seo';
+import { PAGE_META, pageMetadata } from '../../seo';
 
-export const metadata = pageMetadata(
-  'Mebel Putri Jaya Randudongkal - Furniture Berkualitas untuk Hunian Anda',
-  'Temukan koleksi mebel berkualitas dengan desain ramah keluarga. Melayani dengan hati sejak bertahun-tahun di Randudongkal.',
-  '/',
-);
+export const metadata = pageMetadata(PAGE_META.home.title, PAGE_META.home.description, '/');
 
 export default function Page() {
   return <Home />;

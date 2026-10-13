@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, Phone, Menu, X } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa6';
 import { STORE_INFO } from '../constants';
+import { BUSINESS, whatsappHref } from '../seo';
 import logoNav from '../assets/logo/logo-nav.png';
 
 interface LayoutProps {
@@ -86,7 +87,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
               className="px-6 py-6 border-t border-accent"
             >
               <a
-                href={`https://wa.me/6282113092518?text=${encodeURIComponent('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}`}
+                href={whatsappHref('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-primary text-white py-3 rounded-xl font-semibold text-sm hover:bg-primary/90 transition-colors"
@@ -193,12 +194,12 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex flex-col items-end gap-3 text-right">
             <div>
               <div className="text-xs text-gray-400 uppercase tracking-widest mb-1">Hubungi kontak Kami</div>
-              <div className="text-2xl font-bold text-gray-800">+62 821 1309 2518</div>
+              <div className="text-2xl font-bold text-gray-800">{BUSINESS.phonePretty}</div>
             </div>
             <div className="text-xs text-gray-400 uppercase tracking-widest mb-1">Ikuti Sosial Media Kami</div>
             <div className="flex gap-4">
               
-              <a href={`https://wa.me/6282113092518?text=${encodeURIComponent('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}`}
+              <a href={whatsappHref('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}
                 target="_blank" rel="noreferrer"
                 className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
                 <FaWhatsapp size={16} />
@@ -207,7 +208,7 @@ export default function Layout({ children }: LayoutProps) {
                 className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
                 <FaFacebook size={16} />
               </a>
-              <a href="https://www.instagram.com/mebelputrijaya/" target="_blank" rel="noreferrer"
+              <a href={BUSINESS.instagram} target="_blank" rel="noreferrer"
                 className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
                 <FaInstagram size={16} />
               </a>

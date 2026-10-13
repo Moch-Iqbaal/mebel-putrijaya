@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
-import { SITE_ORIGIN } from '../seo';
+import { FURNITURE_STORE_JSON_LD, PAGE_META, SITE_ORIGIN } from '../seo';
 import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
-  title: 'Mebel Putri Jaya Randudongkal - Furniture Berkualitas untuk Hunian Anda',
-  description:
-    'Temukan koleksi mebel berkualitas dengan desain ramah keluarga. Melayani dengan hati sejak bertahun-tahun di Randudongkal.',
+  title: PAGE_META.home.title,
+  description: PAGE_META.home.description,
   icons: {
     icon: '/favicon.svg',
   },
@@ -15,7 +14,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(FURNITURE_STORE_JSON_LD).replace(/</g, '\\u003c'),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

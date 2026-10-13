@@ -1,8 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'motion/react';
-import { MapPin, Phone, MessageCircle, Clock, Mail } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Clock } from 'lucide-react';
 import { STORE_INFO } from '../constants';
+import { BUSINESS, whatsappHref } from '../seo';
 
 export default function Contact() {
   return (
@@ -13,6 +15,18 @@ export default function Contact() {
           Kami siap membantu Anda menemukan furniture impian. Silahkan hubungi kami melalui kontak berikut atau kunjungi toko kami langsung.
         </p>
       </div>
+
+      <figure className="mx-auto mb-16 w-full max-w-md overflow-hidden rounded-[2rem] border border-accent shadow-sm">
+        <Image
+          src={BUSINESS.imagePath}
+          alt="Tampak depan toko Mebel Putri Jaya di Randudongkal, Pemalang"
+          width={712}
+          height={1004}
+          sizes="(min-width: 768px) 28rem, 100vw"
+          className="h-auto w-full"
+          loading="lazy"
+        />
+      </figure>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
         {/* Contact Info */}
@@ -47,7 +61,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Telepon & WhatsApp</h3>
               <p className="text-xl text-gray-600 leading-relaxed mb-4">{STORE_INFO.phone}</p>
               <a 
-                href={`https://wa.me/6282113092518?text=${encodeURIComponent('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}`} target='_blank' rel='noreferrer'
+                href={whatsappHref('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')} target='_blank' rel='noreferrer'
                 className="inline-flex items-center gap-2 text-primary font-bold text-lg hover:underline"
               >
                 <MessageCircle size={20} />
@@ -68,7 +82,7 @@ export default function Contact() {
             <div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Jam Operasional</h3>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Senin - Minggu: <span className="font-bold text-primary">08.00 - 17.00 WIB</span><br />
+                {BUSINESS.hours.daysLabel}: <span className="font-bold text-primary">{BUSINESS.hours.timeLabel}</span><br />
                 Idul Fitri & Idul Adha: <span className="font-bold text-danger">Tutup</span>
               </p>
             </div>
