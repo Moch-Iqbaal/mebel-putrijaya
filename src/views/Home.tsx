@@ -3,17 +3,12 @@
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ChevronRight, Sofa, ArrowRight, Star, MessageCircle, Tag } from 'lucide-react';
-import { FAQS, STORE_INFO } from '../constants';
+import { FAQS } from '../constants';
+import { getCategories } from '../lib/catalog';
+import { whatsappHref } from '../seo';
 
 export default function Home() {
-  const categories = [
-    { name: 'Sofa', emoji: '🛋️' },
-    { name: 'Kursi', emoji: '🪑' },
-    { name: 'Meja', emoji: '🍽️' },
-    { name: 'Lemari', emoji: '🚪' },
-    { name: 'Kasur Busa', emoji: '🛏️' },
-    { name: 'Bantal', emoji: '☁️' },
-  ];
+  const categories = getCategories();
 
   return (
     <div className="space-y-12 pb-12">
@@ -28,13 +23,13 @@ export default function Home() {
             className="flex flex-col gap-6"
           >
             <span className="text-primary font-semibold tracking-widest uppercase text-sm">
-              Kualitas Terbaik untuk Keluarga
+              Mebel Khas Jepara untuk Keluarga
             </span>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-[1.1]">
-              Furniture Nyaman untuk Hunian Idaman
+              Toko Mebel di Randudongkal, Pemalang
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Temukan koleksi mebel berkualitas dengan desain ramah keluarga. Melayani dengan hati sejak bertahun-tahun di <strong>Randudongkal</strong>.
+              Mebel khas Jepara: sofa, lemari, meja rias, dan kasur busa. Lihat langsung di toko, buka setiap hari <strong>08.00–17.00</strong>.
             </p>
             
             <div className="flex flex-col gap-4">
@@ -45,7 +40,7 @@ export default function Home() {
                 Lihat Katalog Terbaru
               </Link>
                   <a
-                    href="https://wa.me/6282113092518?text=Halo%20Mebel%20Putri%20Jaya%2C%20Saya%20ingin%20bertanya%20tentang%20produk%20Anda"
+                    href={whatsappHref('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative overflow-hidden bg-green-500 hover:bg-green-600 active:scale-95 text-white text-center py-4 px-6 rounded-xl font-bold text-lg transition-all duration-200 shadow-lg hover:shadow-green-300 flex items-center justify-center gap-3 group"
@@ -93,7 +88,7 @@ export default function Home() {
       transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.4, 0, 0.2, 1] }}
     >
       <Link
-        href="/katalog"
+        href={`/katalog/${cat.slug}`}
         className="category-card p-8 h-full flex flex-col items-center justify-center text-center gap-4"
       >
         <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-4xl">
@@ -131,7 +126,7 @@ export default function Home() {
               Lihat Produk Kami Langsung
             </h2>
             <p className="text-gray-500 mt-2 text-base">
-              Kualitas terbaik, langsung dari showroom kami di Randudongkal.
+              Langsung dari showroom kami di Randudongkal.
             </p>
           </motion.div>
 
