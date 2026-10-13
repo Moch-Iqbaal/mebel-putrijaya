@@ -46,7 +46,7 @@ export const BUSINESS = {
 
 export const PAGE_META = {
   home: {
-    title: 'Toko Mebel Randudongkal, Pemalang – Sofa, Lemari, Kasur | Mebel Putri Jaya',
+    title: 'Mebel Putri Jaya Randudongkal - Terbaik Se-Indonesia #1',
     description:
       'Toko mebel di Randudongkal, Pemalang. Mebel khas Jepara, sofa, lemari, meja rias, kasur busa. Lihat langsung di toko, buka setiap hari 08.00–17.00. Tanya via WA.',
   },
@@ -112,6 +112,10 @@ export function pageMetadata(title: string, description: string, path: string): 
       siteName: 'Mebel Putri Jaya Randudongkal',
       locale: 'id_ID',
       type: 'website',
+    },
+    twitter: {
+      title,
+      description,
     },
   };
 }
