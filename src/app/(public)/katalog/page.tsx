@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <Catalog
       heading="Katalog Produk"
-      intro="Sofa, kursi tamu jati Jepara, lemari, meja rias, set tempat tidur, kasur busa, dan bantal di toko Randudongkal, Pemalang."
+      intro="Sofa, kursi tamu jati, lemari, meja rias, set tempat tidur, kasur busa, dan bantal di toko Randudongkal, Pemalang."
       products={PRODUCTS}
       categories={getCategories()}
     />

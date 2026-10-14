@@ -18,7 +18,7 @@ export const BUSINESS = {
   phonePretty: '+62 821 1309 2518',
   whatsappNumber: '6282113092518',
   description:
-    'Toko mebel di Randudongkal, Pemalang. Menjual mebel khas Jepara, sofa, lemari, meja rias, set tempat tidur, kasur busa, dan bantal.',
+    'Toko mebel di Randudongkal, Pemalang. Menjual mebel berkualitas, sofa, lemari, meja rias, set tempat tidur, kasur busa, dan bantal.',
   address: {
     streetAddress: 'Jl. Lkr. Utara, RT.08/RW.01, Dusun I',
     addressLocality: 'Randudongkal',
@@ -48,12 +48,12 @@ export const PAGE_META = {
   home: {
     title: 'Mebel Putri Jaya Randudongkal - Terbaik Se-Indonesia #1',
     description:
-      'Toko mebel di Randudongkal, Pemalang. Mebel khas Jepara, sofa, lemari, meja rias, kasur busa. Lihat langsung di toko, buka setiap hari 08.00–17.00. Tanya via WA.',
+      'Toko mebel di Randudongkal, Pemalang. Mebel berkualitas, sofa, lemari, meja rias, kasur busa. Lihat langsung di toko, buka setiap hari 08.00–17.00. Tanya via WA.',
   },
   katalog: {
     title: 'Katalog Mebel: Sofa, Lemari, Kasur – Toko Mebel Randudongkal Pemalang',
     description:
-      'Lihat katalog sofa, kursi tamu jati Jepara, lemari, meja rias, set tempat tidur, kasur busa, dan bantal di Mebel Putri Jaya Randudongkal, Pemalang.',
+      'Lihat katalog sofa, kursi tamu jati, lemari, meja rias, set tempat tidur, kasur busa, dan bantal di Mebel Putri Jaya Randudongkal, Pemalang.',
   },
   kontak: {
     title: 'Alamat & Kontak Toko Mebel Putri Jaya Randudongkal, Pemalang',

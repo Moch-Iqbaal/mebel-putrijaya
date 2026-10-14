@@ -34,13 +34,13 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '4',
-    name: 'Kursi Tamu Jati Jepara',
-    slug: 'kursi-tamu-jati-jepara',
+    name: 'Kursi Tamu Jati',
+    slug: 'kursi-tamu-jati',
     category: 'Kursi',
     price: 'Rp 1.200.000',
     image: '/images/kursi/kursi1.jpeg',
     alt: 'Kursi tamu kayu jati ukir di Mebel Putri Jaya Randudongkal',
-    description: 'Kursi dari kayu jati asli dengan ukiran halus khas Jepara.',
+    description: 'Kursi dari kayu jati pilihan dengan ukiran halus, buatan pengrajin lokal Randudongkal.',
   },
   {
     id: '5',

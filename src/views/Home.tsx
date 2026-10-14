@@ -23,13 +23,13 @@ export default function Home() {
             className="flex flex-col gap-6"
           >
             <span className="text-primary font-semibold tracking-widest uppercase text-sm">
-              Mebel Khas Jepara untuk Keluarga
+              Mebel Berkualitas untuk Keluarga
             </span>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-[1.1]">
               Toko Mebel di Randudongkal, Pemalang
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Mebel khas Jepara: sofa, lemari, meja rias, dan kasur busa. Lihat langsung di toko, buka setiap hari <strong>08.00–17.00</strong>.
+              Mebel berkualitas: sofa, lemari, meja rias, dan kasur busa. Lihat langsung di toko, buka setiap hari <strong>08.00–17.00</strong>.
             </p>
             
             <div className="flex flex-col gap-4">
