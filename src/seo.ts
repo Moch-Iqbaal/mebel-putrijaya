@@ -60,6 +60,11 @@ export const PAGE_META = {
     description:
       'Jl. Lkr. Utara, Dusun I, Randudongkal, Pemalang. Buka setiap hari 08.00–17.00. Telepon/WA 0821-1309-2518. Antar ke Randudongkal dan sekitarnya.',
   },
+  artikel: {
+    title: 'Artikel Toko Mebel Randudongkal, Pemalang | Mebel Putri Jaya',
+    description:
+      'Panduan belanja mebel di Randudongkal, Pemalang: lokasi toko dan antar, memilih lemari kayu atau besi, dan ukuran kasur busa.',
+  },
 } as const;
 
 export const FURNITURE_STORE_JSON_LD = {
