@@ -14,16 +14,22 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+const NAV_ITEMS = [
+  { name: 'Beranda', path: '/' },
+  { name: 'Katalog', path: '/katalog' },
+  { name: 'Artikel', path: '/artikel' },
+  { name: 'Kontak', path: '/kontak' },
+] as const;
+
+function isNavActive(pathname: string, path: string) {
+  if (path === '/artikel') return pathname === path || pathname.startsWith(`${path}/`);
+  return pathname === path;
+}
+
 // ─── Mobile Menu ─────────────────────────────────────────────────────────────
 
 function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const pathname = usePathname();
-
-  const navItems = [
-    { name: 'Beranda', path: '/' },
-    { name: 'Katalog', path: '/katalog' },
-    { name: 'Kontak', path: '/kontak' },
-  ];
 
   return (
     <AnimatePresence>
@@ -57,7 +63,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
             {/* Nav Links */}
             <nav className="flex flex-col px-4 py-6 gap-1 flex-grow">
-              {navItems.map((item, i) => (
+              {NAV_ITEMS.map((item, i) => (
                 <motion.div
                   key={item.path}
                   initial={{ opacity: 0, x: 20 }}
@@ -68,7 +74,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     href={item.path}
                     onClick={onClose}
                     className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                      pathname === item.path
+                      isNavActive(pathname, item.path)
                         ? 'bg-primary/10 text-primary font-semibold'
                         : 'text-gray-600 hover:bg-accent hover:text-primary'
                     }`}
@@ -109,12 +115,6 @@ export default function Layout({ children }: LayoutProps) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItems = [
-    { name: 'Beranda', path: '/' },
-    { name: 'Katalog', path: '/katalog' },
-    { name: 'Kontak', path: '/kontak' },
-  ];
-
   return (
     <div className="min-h-screen flex flex-col bg-bg-base">
 
@@ -133,12 +133,12 @@ export default function Layout({ children }: LayoutProps) {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex gap-8 text-gray-600 font-medium">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
                   className={`text-base transition-colors hover:text-primary ${
-                    pathname === item.path ? 'text-primary' : 'text-gray-600'
+                    isNavActive(pathname, item.path) ? 'text-primary' : 'text-gray-600'
                   }`}
                 >
                   {item.name}
