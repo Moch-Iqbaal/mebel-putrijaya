@@ -136,16 +136,16 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden border border-accent shadow-lg"
-            style={{ aspectRatio: '16/9' }}
+            className="relative mx-auto w-full max-w-md rounded-2xl overflow-hidden border border-accent shadow-lg bg-black"
+            style={{ aspectRatio: '4/5' }}
           >
             <video
-              src="/video/intro_mebel-putrijaya.mp4"
+              src="/video/video-kenalan-4x5.mp4"
               controls
               playsInline
               preload="metadata"
-              poster=""
-              className="w-full h-full object-cover"
+              poster="/video/video-kenalan-4x5-poster.jpg"
+              className="w-full h-full object-contain"
               style={{ display: 'block' }}
             />
           </motion.div>
