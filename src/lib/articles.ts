@@ -14,7 +14,6 @@ const ARTICLE_ORDER = [
   'toko-mebel-pemalang-antar',
   'lemari-pakaian-kayu-besi-pemalang',
   'kasur-busa-randudongkal-ukuran',
-  'sofa-leter-l-ruang-tamu-kecil-pemalang',
 ];
 
 const FAQ_BLOCK = /<!--\s*FAQPage JSON-LD:[\s\S]*?```json\s*([\s\S]*?)```\s*$/;
