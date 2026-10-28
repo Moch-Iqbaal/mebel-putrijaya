@@ -15,6 +15,7 @@ const ARTICLE_ORDER = [
   'lemari-pakaian-kayu-besi-pemalang',
   'kasur-busa-randudongkal-ukuran',
   'kasur-busa-kempes-tanda-ganti-pemalang',
+  'mebel-pengantin-baru-urutan-beli-pemalang',
 ];
 
 const FAQ_BLOCK = /<!--\s*FAQPage JSON-LD:[\s\S]*?```json\s*([\s\S]*?)```\s*$/;
