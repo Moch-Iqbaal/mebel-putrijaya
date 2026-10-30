@@ -4,7 +4,8 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 import { ChevronDown, MessageCircle } from 'lucide-react';
 import { whatsappHref } from '../seo';
 
-const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/putrijayamebel2022@gmail.com';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+const WEB3FORMS_ACCESS_KEY = 'c89bffae-8713-46fc-97c8-3efc2053e404';
 const MESSAGE_MAX = 1000;
 const NAME_MAX = 120;
 const CONTACT_MAX = 120;
@@ -74,7 +75,7 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
   const [status, setStatus] = useState<Status>('idle');
   const sending = useRef(false);
   const detailsRef = useRef<HTMLDetailsElement>(null);
-  const honeyRef = useRef<HTMLInputElement>(null);
+  const botcheckRef = useRef<HTMLInputElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const contactRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
@@ -106,28 +107,27 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
     setStatus('submitting');
 
     try {
-      const response = await fetch(FORMSUBMIT_ENDPOINT, {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
         body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Pertanyaan baru dari artikel: ${articleTitle}`,
+          from_name: 'Website Mebel Putri Jaya',
           name: name.trim(),
           contact: contact.trim(),
           message: message.trim(),
           article_title: articleTitle,
           article_url: currentPageUrl(articleUrl),
-          _subject: `Pertanyaan baru dari artikel: ${articleTitle}`,
-          _template: 'table',
-          _captcha: 'false',
-          _honey: honeyRef.current?.value ?? '',
+          botcheck: botcheckRef.current?.checked === true,
         }),
       });
 
       const data = (await response.json().catch(() => null)) as { success?: unknown } | null;
-      const accepted = response.ok && String(data?.success).toLowerCase() === 'true';
-      if (!accepted) {
+      if (data?.success !== true) {
         setStatus('error');
         return;
       }
@@ -183,15 +183,16 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
           aria-busy={status === 'submitting'}
         >
           <div style={{ display: 'none' }} aria-hidden="true">
-            <label htmlFor="article-question-honey">Jangan diisi</label>
+            <label htmlFor="article-question-botcheck">Jangan diisi</label>
             <input
-              ref={honeyRef}
-              id="article-question-honey"
-              type="text"
-              name="_honey"
+              ref={botcheckRef}
+              id="article-question-botcheck"
+              type="checkbox"
+              name="botcheck"
               tabIndex={-1}
               autoComplete="off"
-              defaultValue=""
+              defaultChecked={false}
+              style={{ display: 'none' }}
             />
           </div>
 
