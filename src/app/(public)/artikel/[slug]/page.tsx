@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ArticleQuestionForm from '../../../../components/ArticleQuestionForm';
-import { getArticle, getArticleSummaries } from '../../../../lib/articles';
-import { SITE_ORIGIN, pageMetadata } from '../../../../seo';
+import { articleIndexPath, articlePath, getArticle, getArticleSummaries } from '../../../../lib/articles';
+import { absoluteUrl, pageMetadata, publicPath } from '../../../../seo';
 
 type Params = { slug: string };
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) return {};
-  return pageMetadata(article.title, article.description, `/artikel/${article.slug}`);
+  return pageMetadata(article.title, article.description, articlePath(article.slug));
 }
 
 function formatDate(iso: string): string {
@@ -44,11 +44,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
       <nav aria-label="Jejak" className="mb-8 text-base text-gray-500">
-        <Link href="/" className="hover:text-primary">
+        <Link href={publicPath('/')} className="hover:text-primary">
           Beranda
         </Link>
         <span aria-hidden="true"> / </span>
-        <Link href="/artikel" className="hover:text-primary">
+        <Link href={articleIndexPath()} className="hover:text-primary">
           Artikel
         </Link>
       </nav>
@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
       <ArticleQuestionForm
         articleTitle={article.title}
-        articleUrl={`${SITE_ORIGIN}/artikel/${article.slug}`}
+        articleUrl={absoluteUrl(articlePath(article.slug))}
       />
 
       {faqJsonLd ? (

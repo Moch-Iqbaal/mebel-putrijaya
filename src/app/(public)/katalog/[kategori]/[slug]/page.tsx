@@ -30,7 +30,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const product = getProduct(kategori, slug);
   if (!product) return {};
   const copy = productCopy(product);
-  return pageMetadata(copy.title, copy.description, productPath(kategori, product.slug));
+  return pageMetadata(copy.title, copy.description, productPath(kategori, product.slug), {
+    url: product.image,
+    alt: product.alt,
+  });
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, Phone, Menu, X } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa6';
 import { STORE_INFO } from '../constants';
-import { BUSINESS, whatsappHref } from '../seo';
+import { BUSINESS, publicPath, whatsappHref } from '../seo';
 import logoNav from '../assets/logo/logo-nav.png';
 
 interface LayoutProps {
@@ -15,10 +15,10 @@ interface LayoutProps {
 }
 
 const NAV_ITEMS = [
-  { name: 'Beranda', path: '/' },
-  { name: 'Katalog', path: '/katalog' },
-  { name: 'Artikel', path: '/artikel' },
-  { name: 'Kontak', path: '/kontak' },
+  { name: 'Beranda', path: publicPath('/') },
+  { name: 'Katalog', path: publicPath('/katalog') },
+  { name: 'Artikel', path: publicPath('/artikel') },
+  { name: 'Kontak', path: publicPath('/kontak') },
 ] as const;
 
 function isNavActive(pathname: string, path: string) {
@@ -124,7 +124,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between h-18 items-center">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
+            <Link href={publicPath('/')} className="flex items-center gap-2">
               <img src={logoNav.src} alt="Mebel Putri Jaya Logo" className="h-8 w-auto rounded-full object-contain" />
               <span className="text-2xl font-bold text-gray-800 tracking-tight">
                 MEBEL PUTRI JAYA®

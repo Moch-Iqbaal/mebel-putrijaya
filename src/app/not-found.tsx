@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { publicPath } from '../seo';
 
 export default function NotFound() {
   return (
@@ -8,7 +9,7 @@ export default function NotFound() {
         <h1 className="text-5xl font-bold text-gray-900 mb-6">Halaman tidak ditemukan</h1>
         <p className="text-xl text-gray-600 mb-8">Alamat yang Anda buka tidak ada di situs ini.</p>
         <Link
-          href="/"
+          href={publicPath('/')}
           className="inline-block bg-primary text-white py-4 px-8 rounded-xl font-bold text-lg hover:opacity-90"
         >
           Kembali ke beranda

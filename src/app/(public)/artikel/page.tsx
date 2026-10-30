@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { getArticleSummaries } from '../../../lib/articles';
+import { articleIndexPath, articlePath, getArticleSummaries } from '../../../lib/articles';
 import { PAGE_META, pageMetadata } from '../../../seo';
 
 export const dynamic = 'force-static';
 
-export const metadata = pageMetadata(PAGE_META.artikel.title, PAGE_META.artikel.description, '/artikel');
+export const metadata = pageMetadata(PAGE_META.artikel.title, PAGE_META.artikel.description, articleIndexPath());
 
 export default function Page() {
   const articles = getArticleSummaries();
@@ -22,7 +22,7 @@ export default function Page() {
         {articles.map((article) => (
           <li key={article.slug}>
             <Link
-              href={`/artikel/${article.slug}`}
+              href={articlePath(article.slug)}
               className="flex h-full flex-col gap-4 rounded-3xl border border-accent bg-white p-8 shadow-sm transition-colors hover:border-primary"
             >
               <h2 className="text-2xl font-bold text-gray-900">{article.title}</h2>

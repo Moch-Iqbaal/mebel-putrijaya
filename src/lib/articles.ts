@@ -5,7 +5,7 @@ import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
-import { SITE_ORIGIN } from '../seo';
+import { publicPath, SITE_ORIGIN } from '../seo';
 
 const ARTICLES_DIR = path.join(process.cwd(), 'content', 'artikel');
 
@@ -111,9 +111,8 @@ function visit(node: HastNode) {
 
     if (child.type === 'element' && child.tagName === 'a') {
       const href = String(child.properties?.href ?? '');
-      if (href.startsWith(SITE_ORIGIN)) {
-        const next = href.slice(SITE_ORIGIN.length) || '/';
-        child.properties = { ...child.properties, href: next.startsWith('/') ? next : `/${next}` };
+      if (href.startsWith('/') || href.startsWith(SITE_ORIGIN)) {
+        child.properties = { ...child.properties, href: publicPath(href) };
       } else if (/^https?:\/\//.test(href)) {
         child.properties = {
           ...child.properties,
@@ -157,6 +156,14 @@ function renderMarkdown(markdown: string): string {
     .use(rehypeStringify, { allowDangerousHtml: true })
     .processSync(markdown);
   return String(file);
+}
+
+export function articleIndexPath(): string {
+  return publicPath('/artikel');
+}
+
+export function articlePath(slug: string): string {
+  return publicPath(`/artikel/${slug}`);
 }
 
 export function getArticleSummaries(): ArticleSummary[] {
