@@ -14,7 +14,7 @@ export default function Page() {
       <div className="text-center mb-16">
         <h1 className="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-6">Artikel</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Panduan belanja mebel di Randudongkal, Pemalang: lokasi toko, memilih lemari, ukuran kasur busa, tanda kasur busa harus diganti, dan urutan beli mebel pengantin baru.
+          Panduan belanja mebel di Randudongkal, Pemalang: lokasi toko, memilih lemari, ukuran kasur busa, tanda kasur busa harus diganti, urutan beli mebel pengantin baru, dan merawat mebel kayu saat musim hujan.
         </p>
       </div>
 
