@@ -170,6 +170,21 @@
 
 .article-question > summary {
   list-style: none;
+  border-radius: 0.75rem;
+}
+
+.article-question > summary:hover,
+.article-question > summary:focus-visible {
+  background-color: #338f8c;
+}
+
+.article-question > summary:focus-visible {
+  outline: 2px solid #111827;
+  outline-offset: 2px;
+}
+
+.article-question[open] > summary {
+  border-radius: 0.75rem 0.75rem 0 0;
 }
 
 .article-question > summary::-webkit-details-marker {

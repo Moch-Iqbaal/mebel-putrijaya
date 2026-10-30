@@ -1,7 +1,7 @@
 'use client';
 
 import { FormEvent, useEffect, useRef, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, MessageCircle } from 'lucide-react';
 import { whatsappHref } from '../seo';
 
 const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/putrijayamebel2022@gmail.com';
@@ -148,21 +148,22 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
     <section aria-labelledby="pertanyaan-lain" className="mt-16 border-t border-accent pt-12">
       <details
         ref={detailsRef}
-        className="article-question w-full overflow-hidden rounded-3xl border border-accent bg-white shadow-sm"
+        className="article-question w-full shadow-md"
         onToggle={(event) => {
           if (status === 'success' && !event.currentTarget.open) {
             event.currentTarget.open = true;
           }
         }}
       >
-        <summary className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary">
-          <h2 id="pertanyaan-lain" className="text-lg font-bold text-gray-900 sm:text-xl">
+        <summary className="flex w-full cursor-pointer items-center gap-3 bg-primary px-5 py-4 text-left text-white transition-colors hover:bg-[#338f8c] focus-visible:bg-[#338f8c] sm:px-6">
+          <MessageCircle className="shrink-0" size={20} aria-hidden="true" />
+          <h2 id="pertanyaan-lain" className="flex-1 text-xl font-bold text-white">
             Punya pertanyaan lain?
           </h2>
-          <ChevronDown className="article-question-chevron shrink-0 text-primary" size={22} aria-hidden="true" />
+          <ChevronDown className="article-question-chevron shrink-0 text-white" size={22} aria-hidden="true" />
         </summary>
 
-        <div className="border-t border-accent px-6 py-6 sm:px-8">
+        <div className="rounded-b-xl border border-t-0 border-accent bg-white px-6 py-6 sm:px-8">
           {status === 'success' ? (
             <p
               role="status"
