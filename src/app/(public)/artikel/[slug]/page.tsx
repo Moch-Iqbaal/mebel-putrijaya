@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import ArticleQuestionForm from '../../../../components/ArticleQuestionForm';
 import { getArticle, getArticleSummaries } from '../../../../lib/articles';
-import { pageMetadata } from '../../../../seo';
+import { SITE_ORIGIN, pageMetadata } from '../../../../seo';
 
 type Params = { slug: string };
 
@@ -57,6 +58,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       </p>
 
       <div className="article-prose" dangerouslySetInnerHTML={{ __html: article.html }} />
+
+      <ArticleQuestionForm
+        articleTitle={article.title}
+        articleUrl={`${SITE_ORIGIN}/artikel/${article.slug}`}
+      />
 
       {faqJsonLd ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
