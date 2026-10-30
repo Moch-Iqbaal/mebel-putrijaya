@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Catalog from '../../../../views/Catalog';
-import { categoryCopy, getCategories, getCategory, getProductsByCategory } from '../../../../lib/catalog';
+import { categoryCopy, categoryPath, getCategories, getCategory, getProductsByCategory } from '../../../../lib/catalog';
 import { pageMetadata } from '../../../../seo';
 
 type Params = { kategori: string };
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!category) return {};
   const products = getProductsByCategory(category.name);
   const copy = categoryCopy(category, products);
-  return pageMetadata(copy.title, copy.description, `/katalog/${category.slug}`);
+  return pageMetadata(copy.title, copy.description, categoryPath(category.slug));
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {

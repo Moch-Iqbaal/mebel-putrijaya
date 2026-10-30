@@ -1,4 +1,5 @@
 import { PRODUCTS } from '../constants';
+import { publicPath } from '../seo';
 import type { Product } from '../types';
 
 const CATEGORY_DEFS: Record<Product['category'], { slug: string; emoji: string }> = {
@@ -45,31 +46,49 @@ export function getProduct(categorySlug: string, slug: string): Product | undefi
   return PRODUCTS.find((product) => product.category === category.name && product.slug === slug);
 }
 
+export function catalogIndexPath(): string {
+  return publicPath('/katalog');
+}
+
 export function categoryPath(slug: string): string {
-  return `/katalog/${slug}`;
+  return publicPath(`/katalog/${slug}`);
 }
 
 export function productPath(categorySlug: string, slug: string): string {
-  return `/katalog/${categorySlug}/${slug}`;
+  return publicPath(`/katalog/${categorySlug}/${slug}`);
 }
+
+const SOFA_CATEGORY_DESCRIPTION =
+  'Sofa leter L, sofa sudut, serta sofa set di Mebel Putri Jaya, toko mebel Randudongkal, Pemalang. Lihat langsung di toko, buka setiap hari 08.00–17.00.';
+
+const SOFA_SUDUT_DESCRIPTION =
+  'Sofa sudut kombinasi cream dan maroon, dengan meja kaca, puff bulat, dan bangku ottoman. Tersedia di Mebel Putri Jaya, toko mebel Randudongkal, Pemalang.';
 
 export function categoryCopy(category: CatalogCategory, products: Product[]) {
   const heading = `${category.name} di Randudongkal, Pemalang`;
   const listed = products.map((product) => product.name).join(', ');
+  const description =
+    category.slug === 'sofa'
+      ? SOFA_CATEGORY_DESCRIPTION
+      : `${listed} di Mebel Putri Jaya, toko mebel Randudongkal, Pemalang. Lihat langsung di toko, buka setiap hari 08.00–17.00.`;
   return {
     heading,
     title: `${heading} | Mebel Putri Jaya`,
-    description: `${listed} di Mebel Putri Jaya, toko mebel Randudongkal, Pemalang. Lihat langsung di toko, buka setiap hari 08.00–17.00.`,
+    description,
     intro: `${listed} di toko Mebel Putri Jaya Randudongkal, Pemalang.`,
   };
 }
 
 export function productCopy(product: Product) {
   const heading = `${product.name} di Randudongkal, Pemalang`;
+  const description =
+    product.slug === 'sofa-sudut-cream-maroon'
+      ? SOFA_SUDUT_DESCRIPTION
+      : `${product.description} Tersedia di Mebel Putri Jaya, toko mebel Randudongkal, Pemalang.`;
   return {
     heading,
     title: `${heading} | Mebel Putri Jaya`,
-    description: `${product.description} Tersedia di Mebel Putri Jaya, toko mebel Randudongkal, Pemalang.`,
+    description,
   };
 }
 

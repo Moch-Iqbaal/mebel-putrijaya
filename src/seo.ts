@@ -12,7 +12,7 @@ export const SITEMAP_LASTMOD = new Date('2026-10-13T00:00:00.000Z');
  */
 export const BUSINESS = {
   name: 'Mebel Putri Jaya Randudongkal',
-  url: `${SITE_ORIGIN}/`,
+  url: SITE_ORIGIN,
   telephone: '+62-821-1309-2518',
   phoneDisplay: '082113092518 (Muh Rozaki)',
   phonePretty: '+62 821 1309 2518',
@@ -48,7 +48,7 @@ export const PAGE_META = {
   home: {
     title: 'Mebel Putri Jaya Randudongkal - Terbaik Se-Indonesia #1',
     description:
-      'Toko mebel di Randudongkal, Pemalang. Mebel berkualitas, sofa, lemari, meja rias, kasur busa. Lihat langsung di toko, buka setiap hari 08.00–17.00. Tanya via WA.',
+      'Toko mebel di Randudongkal, Pemalang. Mebel berkualitas, sofa, lemari, meja rias, kasur busa. Lihat langsung di toko, buka tiap hari 08.00–17.00. Tanya WA.',
   },
   katalog: {
     title: 'Katalog Mebel: Sofa, Lemari, Kasur – Toko Mebel Randudongkal Pemalang',
@@ -63,7 +63,7 @@ export const PAGE_META = {
   artikel: {
     title: 'Artikel Toko Mebel Randudongkal, Pemalang | Mebel Putri Jaya',
     description:
-      'Panduan belanja mebel di Randudongkal, Pemalang: lokasi toko dan antar, memilih lemari kayu atau besi, ukuran kasur busa, tanda kasur harus diganti, urutan beli mebel pengantin baru, dan merawat mebel kayu saat musim hujan.',
+      'Belanja mebel di Randudongkal, Pemalang: lokasi toko dan antar, lemari kayu atau besi, ukuran kasur, tanda ganti kasur, urutan pengantin, rawat kayu hujan.',
   },
 } as const;
 
@@ -104,8 +104,49 @@ export function whatsappHref(text: string): string {
   return `https://wa.me/${BUSINESS.whatsappNumber}?text=${encodeURIComponent(text)}`;
 }
 
-export function pageMetadata(title: string, description: string, path: string): Metadata {
-  const canonical = path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${path}`;
+/** Storefront photo used when a page does not set its own og:image. */
+export const DEFAULT_OG_IMAGE = {
+  url: BUSINESS.imagePath,
+  width: 712,
+  height: 1004,
+  alt: 'Tampak depan toko Mebel Putri Jaya di Randudongkal, Pemalang',
+} as const;
+
+/**
+ * Public path with no trailing slash, except `/`.
+ * Matches `trailingSlash: false`, so the href is the URL after the 308.
+ */
+export function publicPath(path: string): string {
+  if (path.startsWith(SITE_ORIGIN)) {
+    const rest = path.slice(SITE_ORIGIN.length) || '/';
+    return publicPath(rest.startsWith('/') ? rest : `/${rest}`);
+  }
+
+  if (!path.startsWith('/')) return path;
+
+  const hashIndex = path.indexOf('#');
+  const hash = hashIndex === -1 ? '' : path.slice(hashIndex);
+  const beforeHash = hashIndex === -1 ? path : path.slice(0, hashIndex);
+  const queryIndex = beforeHash.indexOf('?');
+  const query = queryIndex === -1 ? '' : beforeHash.slice(queryIndex);
+  const pathname = queryIndex === -1 ? beforeHash : beforeHash.slice(0, queryIndex);
+  const trimmed = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
+  return `${trimmed}${query}${hash}`;
+}
+
+/** Absolute URL in the same form Next emits for canonical and og:url. */
+export function absoluteUrl(path: string): string {
+  const normalized = publicPath(path.startsWith('/') ? path : `/${path}`);
+  return normalized === '/' ? SITE_ORIGIN : `${SITE_ORIGIN}${normalized}`;
+}
+
+export function pageMetadata(
+  title: string,
+  description: string,
+  path: string,
+  image?: { url: string; alt: string },
+): Metadata {
+  const canonical = absoluteUrl(path);
   return {
     title,
     description,
@@ -117,6 +158,7 @@ export function pageMetadata(title: string, description: string, path: string): 
       siteName: 'Mebel Putri Jaya Randudongkal',
       locale: 'id_ID',
       type: 'website',
+      images: [image ?? DEFAULT_OG_IMAGE],
     },
     twitter: {
       title,

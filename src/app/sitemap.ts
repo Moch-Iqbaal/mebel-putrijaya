@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getArticleSummaries } from '../lib/articles';
 import { catalogPaths } from '../lib/catalog';
-import { SITE_ORIGIN, SITEMAP_LASTMOD } from '../seo';
+import { absoluteUrl, SITEMAP_LASTMOD } from '../seo';
 
 const STATIC_PATHS = ['/', '/katalog', '/kontak'] as const;
 
@@ -15,23 +15,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }, null);
 
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.map((path) => ({
-    url: path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${path}`,
+    url: absoluteUrl(path),
     lastModified: SITEMAP_LASTMOD,
   }));
 
   const articleEntries: MetadataRoute.Sitemap = [
     {
-      url: `${SITE_ORIGIN}/artikel`,
+      url: absoluteUrl('/artikel'),
       lastModified: latestArticle ?? SITEMAP_LASTMOD,
     },
     ...articles.map((article) => ({
-      url: `${SITE_ORIGIN}/artikel/${article.slug}`,
+      url: absoluteUrl(`/artikel/${article.slug}`),
       lastModified: new Date(`${article.date}T00:00:00.000Z`),
     })),
   ];
 
   const catalogEntries: MetadataRoute.Sitemap = catalogPaths().map((path) => ({
-    url: `${SITE_ORIGIN}${path}`,
+    url: absoluteUrl(path),
     lastModified: SITEMAP_LASTMOD,
   }));
 

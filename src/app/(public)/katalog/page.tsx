@@ -1,9 +1,9 @@
 import Catalog from '../../../views/Catalog';
 import { PRODUCTS } from '../../../constants';
-import { getCategories } from '../../../lib/catalog';
+import { catalogIndexPath, getCategories } from '../../../lib/catalog';
 import { PAGE_META, pageMetadata } from '../../../seo';
 
-export const metadata = pageMetadata(PAGE_META.katalog.title, PAGE_META.katalog.description, '/katalog');
+export const metadata = pageMetadata(PAGE_META.katalog.title, PAGE_META.katalog.description, catalogIndexPath());
 
 export default function Page() {
   return (

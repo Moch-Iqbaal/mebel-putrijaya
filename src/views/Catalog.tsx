@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle } from 'lucide-react';
-import { categorySlugOf, productPath } from '../lib/catalog';
+import { catalogIndexPath, categoryPath, categorySlugOf, productPath } from '../lib/catalog';
 import { whatsappHref } from '../seo';
 import type { Product } from '../types';
 
@@ -42,7 +42,7 @@ export default function Catalog({
 
       <div className="flex flex-wrap justify-center gap-4 mb-20">
         <Link
-          href="/katalog"
+          href={catalogIndexPath()}
           className={`px-8 py-4 rounded-xl text-lg font-medium transition-all ${
             activeSlug ? 'bg-white text-gray-600 hover:bg-gray-100' : 'bg-primary text-white shadow-lg'
           }`}
@@ -52,7 +52,7 @@ export default function Catalog({
         {categories.map((cat) => (
           <Link
             key={cat.slug}
-            href={`/katalog/${cat.slug}`}
+            href={categoryPath(cat.slug)}
             className={`px-8 py-4 rounded-xl text-lg font-medium transition-all ${
               activeSlug === cat.slug
                 ? 'bg-primary text-white shadow-lg'
