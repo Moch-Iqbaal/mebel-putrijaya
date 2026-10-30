@@ -167,3 +167,35 @@
   height: 100%;
   border: 0;
 }
+
+.article-question > summary {
+  list-style: none;
+}
+
+.article-question > summary::-webkit-details-marker {
+  display: none;
+}
+
+.article-question .article-question-chevron {
+  transition: transform 0.2s ease;
+}
+
+.article-question[open] > summary .article-question-chevron {
+  transform: rotate(180deg);
+}
+
+@supports (interpolate-size: allow-keywords) {
+  .article-question {
+    interpolate-size: allow-keywords;
+  }
+
+  .article-question::details-content {
+    height: 0;
+    overflow: clip;
+    transition: height 0.3s ease, content-visibility 0.3s ease allow-discrete;
+  }
+
+  .article-question[open]::details-content {
+    height: auto;
+  }
+}

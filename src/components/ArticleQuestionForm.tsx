@@ -1,6 +1,7 @@
 'use client';
 
-import { FormEvent, useRef, useState } from 'react';
+import { FormEvent, useEffect, useRef, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { whatsappHref } from '../seo';
 
 const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/putrijayamebel2022@gmail.com';
@@ -72,6 +73,7 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<Status>('idle');
   const sending = useRef(false);
+  const detailsRef = useRef<HTMLDetailsElement>(null);
   const honeyRef = useRef<HTMLInputElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const contactRef = useRef<HTMLInputElement>(null);
@@ -80,6 +82,12 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
   const whatsappFallback = whatsappHref(
     `Halo Mebel Putri Jaya, saya punya pertanyaan dari artikel: ${articleTitle}`,
   );
+
+  useEffect(() => {
+    if (status === 'success' && detailsRef.current) {
+      detailsRef.current.open = true;
+    }
+  }, [status]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -138,25 +146,39 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
 
   return (
     <section aria-labelledby="pertanyaan-lain" className="mt-16 border-t border-accent pt-12">
-      <h2 id="pertanyaan-lain" className="text-[1.75rem] font-bold leading-tight text-gray-900">
-        Punya pertanyaan lain?
-      </h2>
-      <p className="mt-3 text-lg leading-relaxed text-gray-600">
-        Tulis pertanyaan Anda, kami balas lewat email atau WhatsApp.
-      </p>
+      <details
+        ref={detailsRef}
+        className="article-question w-full overflow-hidden rounded-3xl border border-accent bg-white shadow-sm"
+        onToggle={(event) => {
+          if (status === 'success' && !event.currentTarget.open) {
+            event.currentTarget.open = true;
+          }
+        }}
+      >
+        <summary className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary">
+          <h2 id="pertanyaan-lain" className="text-lg font-bold text-gray-900 sm:text-xl">
+            Punya pertanyaan lain?
+          </h2>
+          <ChevronDown className="article-question-chevron shrink-0 text-primary" size={22} aria-hidden="true" />
+        </summary>
 
-      {status === 'success' ? (
-        <p
-          role="status"
-          className="mt-8 rounded-3xl border border-primary/30 bg-primary/10 px-6 py-5 text-lg text-gray-800"
-        >
-          Terima kasih, pertanyaan Anda sudah terkirim.
-        </p>
-      ) : (
-        <form
+        <div className="border-t border-accent px-6 py-6 sm:px-8">
+          {status === 'success' ? (
+            <p
+              role="status"
+              className="rounded-2xl border border-primary/30 bg-primary/10 px-5 py-4 text-lg text-gray-800"
+            >
+              Terima kasih, pertanyaan Anda sudah terkirim.
+            </p>
+          ) : (
+            <>
+              <p className="mb-6 text-lg leading-relaxed text-gray-600">
+                Tulis pertanyaan Anda, kami balas lewat email atau WhatsApp.
+              </p>
+              <form
           onSubmit={handleSubmit}
           noValidate
-          className="relative mt-8 flex flex-col gap-5 rounded-3xl border border-accent bg-white p-6 shadow-sm sm:p-8"
+          className="relative flex flex-col gap-5"
           aria-busy={status === 'submitting'}
         >
           <div style={{ display: 'none' }} aria-hidden="true">
@@ -284,7 +306,10 @@ export default function ArticleQuestionForm({ articleTitle, articleUrl }: Articl
             {status === 'submitting' ? 'Mengirim...' : 'Kirim'}
           </button>
         </form>
-      )}
+            </>
+          )}
+        </div>
+      </details>
     </section>
   );
 }
