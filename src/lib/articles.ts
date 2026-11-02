@@ -4,7 +4,10 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import rehypeStringify from 'rehype-stringify';
+import type { Schema } from 'hast-util-sanitize';
 import { publicPath, SITE_ORIGIN } from '../seo';
 
 const ARTICLES_DIR = path.join(process.cwd(), 'content', 'artikel');
@@ -148,12 +151,60 @@ function splitFaq(content: string): { body: string; faqJsonLd: Record<string, un
   };
 }
 
+/**
+ * Raw HTML in the markdown is parsed, then reduced to the default schema plus
+ * a Google Maps iframe. stringify does not pass raw HTML through.
+ */
+const articleSchema: Schema = {
+  ...defaultSchema,
+  tagNames: [...(defaultSchema.tagNames ?? []), 'iframe'],
+  attributes: {
+    ...defaultSchema.attributes,
+    div: [...(defaultSchema.attributes?.div ?? []), ['className', 'article-map']],
+    iframe: ['src', 'loading', 'referrerPolicy', 'allowFullScreen'],
+  },
+};
+
+function isGoogleMapsEmbed(src: string): boolean {
+  try {
+    const url = new URL(src);
+    if (url.protocol !== 'https:' || url.username || url.password) return false;
+    const host = url.hostname.toLowerCase();
+    if (host === 'maps.google.com') return true;
+    return host === 'www.google.com' && url.pathname.startsWith('/maps');
+  } catch {
+    return false;
+  }
+}
+
+function allowMapsIframesOnly() {
+  return (tree: HastNode) => {
+    filterIframes(tree);
+  };
+}
+
+function filterIframes(node: HastNode) {
+  if (!node.children) return;
+  node.children = node.children.filter((child) => {
+    if (child.type === 'element' && child.tagName === 'iframe') {
+      const src = child.properties?.src;
+      const value = Array.isArray(src) ? src.join('') : String(src ?? '');
+      return isGoogleMapsEmbed(value);
+    }
+    filterIframes(child);
+    return true;
+  });
+}
+
 function renderMarkdown(markdown: string): string {
   const file = remark()
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeSanitize, articleSchema)
+    .use(allowMapsIframesOnly)
     .use(enhanceArticleHtml)
-    .use(rehypeStringify, { allowDangerousHtml: true })
+    .use(rehypeStringify)
     .processSync(markdown);
   return String(file);
 }

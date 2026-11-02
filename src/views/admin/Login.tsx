@@ -6,6 +6,48 @@ import { motion } from 'motion/react';
 import { Lock, Mail } from 'lucide-react';
 import { supabase } from '../../lib/supabaseClients';
 
+const MAX_FAILURES = 5;
+const LOCKOUT_MS = 60_000;
+const STORAGE_KEY = 'mpj-admin-login-failures';
+const GENERIC_ERROR = 'Login gagal. Periksa email dan password, lalu coba lagi.';
+
+type FailureRecord = { count: number; lockedUntil: number };
+
+function readFailures(): FailureRecord {
+  try {
+    const raw = sessionStorage.getItem(STORAGE_KEY);
+    if (!raw) return { count: 0, lockedUntil: 0 };
+    const parsed = JSON.parse(raw) as Partial<FailureRecord>;
+    return {
+      count: typeof parsed.count === 'number' && parsed.count > 0 ? parsed.count : 0,
+      lockedUntil: typeof parsed.lockedUntil === 'number' && parsed.lockedUntil > 0 ? parsed.lockedUntil : 0,
+    };
+  } catch {
+    return { count: 0, lockedUntil: 0 };
+  }
+}
+
+function writeFailures(record: FailureRecord) {
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(record));
+  } catch {
+    // Storage can be blocked. The attempt still fails with a generic message.
+  }
+}
+
+function clearFailures() {
+  try {
+    sessionStorage.removeItem(STORAGE_KEY);
+  } catch {
+    // Ignore storage failures on a successful login.
+  }
+}
+
+function lockoutMessage(lockedUntil: number, now: number): string {
+  const seconds = Math.max(1, Math.ceil((lockedUntil - now) / 1000));
+  return `Terlalu banyak percobaan. Coba lagi dalam ${seconds} detik.`;
+}
+
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,18 +57,39 @@ export default function Login() {
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
+    if (loading) return;
     setError('');
-    setLoading(true);
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    setLoading(false);
-
-    if (error) {
-      setError('Email atau password salah.');
+    const now = Date.now();
+    const record = readFailures();
+    if (record.lockedUntil > now) {
+      setError(lockoutMessage(record.lockedUntil, now));
       return;
     }
 
-    router.push('/admin');
+    setLoading(true);
+    try {
+      const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+      if (signInError) {
+        const nextCount = (record.lockedUntil > 0 ? 0 : record.count) + 1;
+        if (nextCount >= MAX_FAILURES) {
+          const lockedUntil = Date.now() + LOCKOUT_MS;
+          writeFailures({ count: 0, lockedUntil });
+          setError(lockoutMessage(lockedUntil, Date.now()));
+        } else {
+          writeFailures({ count: nextCount, lockedUntil: 0 });
+          setError(GENERIC_ERROR);
+        }
+        return;
+      }
+
+      clearFailures();
+      router.push('/admin');
+    } catch {
+      setError(GENERIC_ERROR);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -56,7 +119,7 @@ export default function Login() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full pl-10 pr-4 py-3 border border-accent rounded-xl focus:outline-none focus:border-primary transition-colors"
-                placeholder="admin@mebelputrijaya.com"
+                autoComplete="username"
               />
             </div>
           </div>
@@ -71,7 +134,7 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 className="w-full pl-10 pr-4 py-3 border border-accent rounded-xl focus:outline-none focus:border-primary transition-colors"
-                placeholder="••••••••"
+                autoComplete="current-password"
               />
             </div>
           </div>
