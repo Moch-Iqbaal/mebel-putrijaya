@@ -20,6 +20,7 @@ const ARTICLE_ORDER = [
   'kasur-busa-kempes-tanda-ganti-pemalang',
   'mebel-pengantin-baru-urutan-beli-pemalang',
   'merawat-mebel-kayu-musim-hujan-randudongkal',
+  'kursi-tamu-kayu-ruang-tamu-pemalang',
 ];
 
 const FAQ_BLOCK = /<!--\s*FAQPage JSON-LD:[\s\S]*?```json\s*([\s\S]*?)```\s*$/;
