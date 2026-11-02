@@ -63,7 +63,7 @@ export const PAGE_META = {
   artikel: {
     title: 'Artikel Toko Mebel Randudongkal, Pemalang | Mebel Putri Jaya',
     description:
-      'Belanja mebel di Randudongkal, Pemalang: lokasi toko dan antar, lemari kayu atau besi, ukuran kasur, tanda ganti kasur, urutan pengantin, rawat kayu hujan.',
+      'Belanja mebel di Randudongkal, Pemalang: antar, lemari kayu atau besi, ukuran kasur, tanda ganti kasur, urutan pengantin, rawat kayu hujan, cek kursi tamu.',
   },
 } as const;
 
