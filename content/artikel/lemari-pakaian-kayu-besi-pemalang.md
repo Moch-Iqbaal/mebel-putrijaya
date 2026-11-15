@@ -81,7 +81,7 @@ Anda bisa melihat [lemari besi 2 pintu](/katalog/lemari/lemari-besi-2-pintu) di 
 | Cocok untuk | Rumah sendiri, kamar utama | Kos, kontrakan, kamar anak |
 | Harga | Tanya harga terbaru via WA | Tanya harga terbaru via WA |
 
-Harga lemari tergantung bahan, ukuran, jumlah pintu, dan model. **Untuk harga terbaru, langsung tanya via WA 0821-1309-2518.**
+Harga lemari tergantung bahan, ukuran, jumlah pintu, dan model. **Untuk harga terbaru, langsung tanya via WA 0819-9164-7012.**
 
 ## Cara mengukur kamar sebelum beli lemari
 
@@ -121,16 +121,16 @@ Kalau tidak sempat datang, Anda bisa pesan lewat WhatsApp dan barang bisa dianta
 Lemari besi tahan rayap tetapi bisa berkarat di ruangan lembap. Lemari kayu kokoh dan awet asal dijaga dari rayap dan air.
 
 **Berapa ukuran lemari besi 2 pintu?**
-Ukuran lemari besi 2 pintu berbeda-beda tergantung model. Untuk ukuran model yang tersedia di toko, tanya via WA 0821-1309-2518.
+Ukuran lemari besi 2 pintu berbeda-beda tergantung model. Untuk ukuran model yang tersedia di toko, tanya via WA 0819-9164-7012.
 
 **Berapa harga lemari pakaian di Mebel Putri Jaya?**
-Harga tergantung bahan, ukuran, dan model, dan bisa berubah. Tanya harga terbaru via WA 0821-1309-2518.
+Harga tergantung bahan, ukuran, dan model, dan bisa berubah. Tanya harga terbaru via WA 0819-9164-7012.
 
 **Lemari apa yang cocok untuk kamar kecil atau kos?**
 Lemari 2 pintu atau model pintu sliding, karena tidak butuh banyak ruang untuk membuka pintu.
 
 **Apakah bisa diantar ke rumah?**
-Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0821-1309-2518.
+Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0819-9164-7012.
 
 ---
 
@@ -156,7 +156,7 @@ Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongk
       "name": "Berapa ukuran lemari besi 2 pintu?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ukuran lemari besi 2 pintu berbeda-beda tergantung model. Untuk ukuran model yang tersedia di toko, tanya via WA 0821-1309-2518."
+        "text": "Ukuran lemari besi 2 pintu berbeda-beda tergantung model. Untuk ukuran model yang tersedia di toko, tanya via WA 0819-9164-7012."
       }
     },
     {
@@ -164,7 +164,7 @@ Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongk
       "name": "Berapa harga lemari pakaian di Mebel Putri Jaya?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Harga tergantung bahan, ukuran, dan model, dan bisa berubah. Tanya harga terbaru via WA 0821-1309-2518."
+        "text": "Harga tergantung bahan, ukuran, dan model, dan bisa berubah. Tanya harga terbaru via WA 0819-9164-7012."
       }
     },
     {
@@ -180,7 +180,7 @@ Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongk
       "name": "Apakah bisa diantar ke rumah?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0821-1309-2518."
+        "text": "Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0819-9164-7012."
       }
     }
   ]
