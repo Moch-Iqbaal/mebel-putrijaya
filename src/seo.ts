@@ -13,10 +13,10 @@ export const SITEMAP_LASTMOD = new Date('2026-10-13T00:00:00.000Z');
 export const BUSINESS = {
   name: 'Mebel Putri Jaya Randudongkal',
   url: SITE_ORIGIN,
-  telephone: '+62-821-1309-2518',
-  phoneDisplay: '082113092518 (Muh Rozaki)',
-  phonePretty: '+62 821 1309 2518',
-  whatsappNumber: '6282113092518',
+  telephone: '+62-819-9164-7012',
+  phoneDisplay: '081991647012',
+  phonePretty: '+62 819 9164 7012',
+  whatsappNumber: '6281991647012',
   description:
     'Toko mebel di Randudongkal, Pemalang. Menjual mebel berkualitas, sofa, lemari, meja rias, set tempat tidur, kasur busa, dan bantal.',
   address: {
@@ -58,7 +58,7 @@ export const PAGE_META = {
   kontak: {
     title: 'Alamat & Kontak Toko Mebel Putri Jaya Randudongkal, Pemalang',
     description:
-      'Jl. Lkr. Utara, Dusun I, Randudongkal, Pemalang. Buka setiap hari 08.00–17.00. Telepon/WA 0821-1309-2518. Antar ke Randudongkal dan sekitarnya.',
+      'Jl. Lkr. Utara, Dusun I, Randudongkal, Pemalang. Buka setiap hari 08.00–17.00. Telepon/WA 0819-9164-7012. Antar ke Randudongkal dan sekitarnya.',
   },
   artikel: {
     title: 'Artikel Toko Mebel Randudongkal, Pemalang | Mebel Putri Jaya',
