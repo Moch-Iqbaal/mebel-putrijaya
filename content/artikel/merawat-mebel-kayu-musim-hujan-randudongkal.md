@@ -96,7 +96,7 @@ Kalau Anda berencana membeli mebel baru dan rumah Anda memang cenderung lembap, 
 
 Kalau Anda bingung memilih mebel yang cocok untuk rumah yang lembap, atau ingin melihat langsung bahan lemari, meja, kursi, sofa, dan kasur, silakan datang ke **Mebel Putri Jaya Randudongkal**. Semua kategori juga bisa dilihat dulu di [katalog lengkap](/katalog), termasuk [lemari](/katalog/lemari), [meja](/katalog/meja), dan [kasur busa](/katalog/kasur-busa).
 
-**Tanya stok, bahan, harga terbaru, dan pengantaran via WhatsApp 0821-1309-2518.** Info wilayah antar ada di artikel [toko mebel Pemalang yang bisa antar](/artikel/toko-mebel-pemalang-antar), dan alamat toko ada di halaman [kontak](/kontak).
+**Tanya stok, bahan, harga terbaru, dan pengantaran via WhatsApp 0819-9164-7012.** Info wilayah antar ada di artikel [toko mebel Pemalang yang bisa antar](/artikel/toko-mebel-pemalang-antar), dan alamat toko ada di halaman [kontak](/kontak).
 
 ## FAQ
 
@@ -113,7 +113,7 @@ Keluarkan isi lemari, lap jamur dengan kain yang dibasahi sedikit larutan cuka d
 Sebaiknya tidak. Bagian bawah kasur yang menempel lantai cepat lembap. Letakkan di atas ranjang dan jemur atau berdirikan kasur saat cuaca cerah.
 
 **Di mana melihat mebel yang cocok untuk rumah lembap di Randudongkal?**
-Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan membandingkan bahan secara langsung. Tanya stok dan harga terbaru via WA 0821-1309-2518.
+Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan membandingkan bahan secara langsung. Tanya stok dan harga terbaru via WA 0819-9164-7012.
 
 ---
 
@@ -128,7 +128,7 @@ Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan membandingka
     {"@type": "Question", "name": "Bagaimana cara mencegah mebel kayu berjamur?", "acceptedAnswer": {"@type": "Answer", "text": "Beri jarak mebel dari dinding, jaga kaki mebel tetap kering saat mengepel, buka lemari dan jendela saat cuaca cerah, pakai penyerap lembap, dan simpan baju dalam keadaan benar-benar kering."}},
     {"@type": "Question", "name": "Bagaimana membersihkan jamur di permukaan lemari kayu?", "acceptedAnswer": {"@type": "Answer", "text": "Keluarkan isi lemari, lap jamur dengan kain yang dibasahi sedikit larutan cuka dan air lalu diperas hampir kering, kemudian keringkan dengan kain bersih dan biarkan terangin-angin. Coba dulu di bagian yang tidak terlihat."}},
     {"@type": "Question", "name": "Apakah kasur busa boleh diletakkan langsung di lantai saat musim hujan?", "acceptedAnswer": {"@type": "Answer", "text": "Sebaiknya tidak. Bagian bawah kasur yang menempel lantai cepat lembap. Letakkan di atas ranjang dan jemur atau berdirikan kasur saat cuaca cerah."}},
-    {"@type": "Question", "name": "Di mana melihat mebel yang cocok untuk rumah lembap di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan membandingkan bahan secara langsung. Tanya stok dan harga terbaru via WA 0821-1309-2518."}}
+    {"@type": "Question", "name": "Di mana melihat mebel yang cocok untuk rumah lembap di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan membandingkan bahan secara langsung. Tanya stok dan harga terbaru via WA 0819-9164-7012."}}
   ]
 }
 ```
