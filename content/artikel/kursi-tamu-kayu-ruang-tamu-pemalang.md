@@ -99,7 +99,7 @@ Kalau Anda baru menikah dan sedang menyusun daftar belanja perabot, baca juga ar
 
 Cara paling aman memilih kursi tamu adalah melihat, menyentuh, dan mendudukinya langsung. Silakan mampir ke **Mebel Putri Jaya Randudongkal** untuk membandingkan model kursi tamu, sofa, dan meja secara langsung. Sebelum datang, Anda juga bisa melihat-lihat dulu di [katalog lengkap](/katalog).
 
-**Tanya stok, ukuran, harga terbaru, dan pengantaran via WhatsApp 0821-1309-2518.** Info wilayah antar ada di artikel [toko mebel Pemalang yang bisa antar](/artikel/toko-mebel-pemalang-antar), dan alamat toko ada di halaman [kontak](/kontak).
+**Tanya stok, ukuran, harga terbaru, dan pengantaran via WhatsApp 0819-9164-7012.** Info wilayah antar ada di artikel [toko mebel Pemalang yang bisa antar](/artikel/toko-mebel-pemalang-antar), dan alamat toko ada di halaman [kontak](/kontak).
 
 ## FAQ
 
@@ -116,7 +116,7 @@ Tekan busanya dan pastikan kembali ke bentuk semula, periksa jahitan kain, dan t
 Lap debu dengan kain kering, hindari tampias hujan dan sinar matahari langsung sepanjang hari, beri jarak dari dinding yang lembap, dan jaga kaki kursi tetap kering saat mengepel.
 
 **Di mana melihat kursi tamu kayu di Randudongkal?**
-Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba kursi tamu secara langsung. Tanya stok, ukuran, dan harga terbaru via WA 0821-1309-2518.
+Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba kursi tamu secara langsung. Tanya stok, ukuran, dan harga terbaru via WA 0819-9164-7012.
 
 ---
 
@@ -131,7 +131,7 @@ Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba kurs
     {"@type": "Question", "name": "Bagaimana cara mengecek kursi tamu kayu yang kokoh?", "acceptedAnswer": {"@type": "Answer", "text": "Duduk di setiap kursi dan geser badan ke kiri dan kanan, goyangkan sandaran pelan, lihat sambungan di bagian bawah, dan pastikan keempat kaki menapak rata di lantai. Kursi yang kokoh tidak berderit atau bergoyang."}},
     {"@type": "Question", "name": "Apa yang perlu dicek dari bantalan dudukan kursi tamu?", "acceptedAnswer": {"@type": "Answer", "text": "Tekan busanya dan pastikan kembali ke bentuk semula, periksa jahitan kain, dan tanyakan apakah sarung bantalan bisa dilepas untuk dicuci."}},
     {"@type": "Question", "name": "Bagaimana merawat kursi tamu kayu supaya awet?", "acceptedAnswer": {"@type": "Answer", "text": "Lap debu dengan kain kering, hindari tampias hujan dan sinar matahari langsung sepanjang hari, beri jarak dari dinding yang lembap, dan jaga kaki kursi tetap kering saat mengepel."}},
-    {"@type": "Question", "name": "Di mana melihat kursi tamu kayu di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba kursi tamu secara langsung. Tanya stok, ukuran, dan harga terbaru via WA 0821-1309-2518."}}
+    {"@type": "Question", "name": "Di mana melihat kursi tamu kayu di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba kursi tamu secara langsung. Tanya stok, ukuran, dan harga terbaru via WA 0819-9164-7012."}}
   ]
 }
 ```
