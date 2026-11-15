@@ -92,7 +92,7 @@ Sebelum memutuskan, lakukan pengecekan sederhana ini di toko:
 
 Kalau Anda sedang menyiapkan kamar pengantin, bawa catatan ukuran kamar dan daftar prioritas Anda ke **Mebel Putri Jaya Randudongkal**. Di toko, Anda bisa melihat dan mencoba langsung kasur, lemari, meja rias, dan pilihan lainnya. Semua kategori juga bisa dilihat dulu di [katalog lengkap](/katalog).
 
-**Tanya stok, ukuran, harga terbaru, dan pengantaran via WhatsApp 0821-1309-2518.** Alamat dan petunjuk arah ada di halaman [kontak](/kontak).
+**Tanya stok, ukuran, harga terbaru, dan pengantaran via WhatsApp 0819-9164-7012.** Alamat dan petunjuk arah ada di halaman [kontak](/kontak).
 
 ## FAQ
 
@@ -109,7 +109,7 @@ Lemari kayu terasa kokoh, sedangkan lemari besi lebih ringan dan praktis kalau s
 Tidak harus. Kalau masih tinggal bersama orang tua, kursi tamu bisa ditunda sampai Anda punya rumah sendiri supaya ukurannya pas dengan ruangan.
 
 **Di mana melihat mebel kamar pengantin di Randudongkal?**
-Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba langsung. Tanya stok dan harga terbaru via WA 0821-1309-2518.
+Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba langsung. Tanya stok dan harga terbaru via WA 0819-9164-7012.
 
 ---
 
@@ -124,7 +124,7 @@ Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba lang
     {"@type": "Question", "name": "Apa yang perlu diukur sebelum membeli mebel kamar?", "acceptedAnswer": {"@type": "Answer", "text": "Ukur panjang dan lebar kamar, lebar pintu dan lorong, posisi jendela dan stopkontak, serta tinggi plafon. Sisakan jalur jalan dan ruang untuk membuka pintu lemari."}},
     {"@type": "Question", "name": "Lebih baik lemari kayu atau lemari besi untuk pengantin baru?", "acceptedAnswer": {"@type": "Answer", "text": "Lemari kayu terasa kokoh, sedangkan lemari besi lebih ringan dan praktis kalau sering pindah. Kalau masih tinggal di kontrakan, lemari yang ringan biasanya lebih mudah."}},
     {"@type": "Question", "name": "Perlukah langsung membeli kursi tamu setelah menikah?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak harus. Kalau masih tinggal bersama orang tua, kursi tamu bisa ditunda sampai Anda punya rumah sendiri supaya ukurannya pas dengan ruangan."}},
-    {"@type": "Question", "name": "Di mana melihat mebel kamar pengantin di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba langsung. Tanya stok dan harga terbaru via WA 0821-1309-2518."}}
+    {"@type": "Question", "name": "Di mana melihat mebel kamar pengantin di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Anda bisa datang ke Mebel Putri Jaya Randudongkal untuk melihat dan mencoba langsung. Tanya stok dan harga terbaru via WA 0819-9164-7012."}}
   ]
 }
 ```
