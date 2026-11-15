@@ -162,7 +162,7 @@ export default function Layout({ children }: LayoutProps) {
       <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow pb-20 md:pb-0">
         <motion.div
           key={pathname}
           initial={{ opacity: 0, y: 10 }}
@@ -172,6 +172,23 @@ export default function Layout({ children }: LayoutProps) {
           {children}
         </motion.div>
       </main>
+
+      {/* Sticky WhatsApp CTA — mobile only */}
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-green-600 bg-[#25D366] shadow-[0_-4px_18px_rgba(22,101,52,0.28)] md:hidden">
+        <a
+          href={whatsappHref('Halo Mebel Putri Jaya, Saya ingin bertanya tentang produk Anda')}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Tanya harga via WhatsApp"
+          className="mx-auto flex min-h-16 max-w-md items-center justify-center gap-3 px-5 text-center text-white transition-colors hover:bg-[#1ebe5d] focus-visible:bg-[#1ebe5d]"
+        >
+          <FaWhatsapp size={23} aria-hidden="true" />
+          <span className="leading-tight">
+            <span className="block text-sm font-bold">Tanya Harga via WhatsApp</span>
+            <span className="block text-xs font-medium text-white/90">Admin siap membantu</span>
+          </span>
+        </a>
+      </div>
 
       {/* Footer — tidak diubah */}
       <footer className="bg-white border-t border-accent p-8 md:p-12">
