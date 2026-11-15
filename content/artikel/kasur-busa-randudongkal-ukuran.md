@@ -13,7 +13,7 @@ Saran pertama yang paling penting: **ukur rangka ranjang Anda dulu** (panjang da
 
 ## Kasur yang tersedia di Mebel Putri Jaya
 
-Di toko tersedia [kasur busa](/katalog/kasur-busa) dengan beberapa pilihan ukuran dan motif, termasuk [kasur busa motif batik](/katalog/kasur-busa/kasur-busa-batik). Merek, ukuran, dan ketebalan yang ready bisa berubah sesuai stok. **Untuk merek, ukuran yang ready, dan harga terbaru, langsung tanya via WA 0821-1309-2518.**
+Di toko tersedia [kasur busa](/katalog/kasur-busa) dengan beberapa pilihan ukuran dan motif, termasuk [kasur busa motif batik](/katalog/kasur-busa/kasur-busa-batik). Merek, ukuran, dan ketebalan yang ready bisa berubah sesuai stok. **Untuk merek, ukuran yang ready, dan harga terbaru, langsung tanya via WA 0819-9164-7012.**
 
 ## Tabel ukuran kasur dan cocok untuk siapa
 
@@ -52,7 +52,7 @@ Kasur busa dan spring bed punya karakter berbeda:
 - **Kasur busa:** ringan, mudah digulung atau dipindah, tidak berbunyi, dan bisa dipakai langsung di lantai.
 - **Spring bed:** memakai per di dalamnya, terasa lebih memantul, biasanya lebih tebal dan lebih berat, dan umumnya dipakai bersama divan.
 
-Kalau Anda tertarik dengan spring bed, **tanyakan dulu ketersediaannya via WA 0821-1309-2518.**
+Kalau Anda tertarik dengan spring bed, **tanyakan dulu ketersediaannya via WA 0819-9164-7012.**
 
 > 
 
@@ -86,13 +86,13 @@ Mebel Putri Jaya, . Buka tiap hari 08.00–17.00.
 Untuk satu orang dewasa yang ingin lega, atau dua anak. Pasangan lebih nyaman di 160×200 atau 180×200.
 
 **Kasur no 1, no 2, no 3 ukurannya berapa?**
-Ukuran tiap nomor bisa berbeda antar-merek. Patokan yang paling akurat adalah label resmi di kasur. Sebutkan ukuran dalam sentimeter atau minta foto label via WA 0821-1309-2518.
+Ukuran tiap nomor bisa berbeda antar-merek. Patokan yang paling akurat adalah label resmi di kasur. Sebutkan ukuran dalam sentimeter atau minta foto label via WA 0819-9164-7012.
 
 **Berapa harga kasur busa di Mebel Putri Jaya?**
-Harga tergantung ukuran, ketebalan, dan merek. Tanya harga terbaru via WA 0821-1309-2518.
+Harga tergantung ukuran, ketebalan, dan merek. Tanya harga terbaru via WA 0819-9164-7012.
 
 **Apakah kasur bisa diantar?**
-Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0821-1309-2518.
+Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0819-9164-7012.
 
 ---
 
@@ -126,7 +126,7 @@ Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongk
       "name": "Kasur no 1, no 2, no 3 ukurannya berapa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ukuran tiap nomor bisa berbeda antar-merek. Patokan yang paling akurat adalah label resmi di kasur. Sebutkan ukuran dalam sentimeter atau minta foto label via WA 0821-1309-2518."
+        "text": "Ukuran tiap nomor bisa berbeda antar-merek. Patokan yang paling akurat adalah label resmi di kasur. Sebutkan ukuran dalam sentimeter atau minta foto label via WA 0819-9164-7012."
       }
     },
     {
@@ -134,7 +134,7 @@ Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongk
       "name": "Berapa harga kasur busa di Mebel Putri Jaya?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Harga tergantung ukuran, ketebalan, dan merek. Tanya harga terbaru via WA 0821-1309-2518."
+        "text": "Harga tergantung ukuran, ketebalan, dan merek. Tanya harga terbaru via WA 0819-9164-7012."
       }
     },
     {
@@ -142,7 +142,7 @@ Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongk
       "name": "Apakah kasur bisa diantar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0821-1309-2518."
+        "text": "Toko melayani pengantaran. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, tanya via WA 0819-9164-7012."
       }
     }
   ]
