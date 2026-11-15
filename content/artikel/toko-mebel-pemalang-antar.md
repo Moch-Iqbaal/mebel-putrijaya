@@ -52,7 +52,7 @@ Ada pilihan [lemari](/katalog/lemari) kayu dan lemari besi. Lemari kayu menang d
 
 Tersedia juga [kasur busa](/katalog/kasur-busa) dalam beberapa ukuran, plus bantal. Kasur sebaiknya dicoba langsung di toko supaya Anda bisa merasakan empuk atau kerasnya. Panduan memilih ukuran ada di artikel [Toko Kasur Randudongkal: Panduan Ukuran Kasur Busa](/artikel/kasur-busa-randudongkal-ukuran).
 
-> Mau tanya stok, harga, area antar, atau cara bayar? Chat WhatsApp **0821-1309-2518** ([wa.me/6282113092518](https://wa.me/6282113092518)). Atau mampir langsung ke toko: Jl. Lkr. Utara, RT.08/RW.01, Dusun I, Randudongkal, Kec. Randudongkal, Kab. Pemalang, Jawa Tengah 52353. Buka tiap hari 08.00–17.00.
+> Mau tanya stok, harga, area antar, atau cara bayar? Chat WhatsApp **0819-9164-7012** ([wa.me/6281991647012](https://wa.me/6281991647012)). Atau mampir langsung ke toko: Jl. Lkr. Utara, RT.08/RW.01, Dusun I, Randudongkal, Kec. Randudongkal, Kab. Pemalang, Jawa Tengah 52353. Buka tiap hari 08.00–17.00.
 
 ## Wilayah antar di Kabupaten Pemalang
 
@@ -62,7 +62,7 @@ Mebel Putri Jaya bisa mengantar barang ke rumah pembeli. Area antar bisa berbeda
 
 ### Ongkos antar dan lama pengiriman
 
-Ongkos antar dan perkiraan waktu sampai dihitung sesuai lokasi dan barang yang dibeli. **Untuk ongkos antar dan jadwal kirim terbaru, langsung tanya via WA 0821-1309-2518.** Lebih baik tanyakan di awal, sebelum bayar, supaya total biayanya jelas.
+Ongkos antar dan perkiraan waktu sampai dihitung sesuai lokasi dan barang yang dibeli. **Untuk ongkos antar dan jadwal kirim terbaru, langsung tanya via WA 0819-9164-7012.** Lebih baik tanyakan di awal, sebelum bayar, supaya total biayanya jelas.
 
 ## Cara pesan: lihat langsung atau lewat WhatsApp
 
@@ -72,7 +72,7 @@ Ada dua cara membeli di Mebel Putri Jaya.
 
 **2. Pesan lewat WhatsApp.** Kalau sedang sibuk atau rumah Anda jauh, langkahnya begini:
 
-1. Chat WA **0821-1309-2518**.
+1. Chat WA **0819-9164-7012**.
 2. Kirim nama barang atau foto dari [katalog](/katalog).
 3. Admin mengonfirmasi stok, harga, dan ongkos antar.
 4. Sepakati cara bayar dan jadwal kirim.
@@ -100,17 +100,17 @@ Jl. Lkr. Utara, RT.08/RW.01, Dusun I, Randudongkal, Kec. Randudongkal, Kab. Pema
 Buka setiap hari pukul 08.00–17.00.
 
 **Apakah bisa antar ke luar Randudongkal?**
-Toko melayani pengantaran ke rumah pembeli. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, sebutkan alamat Anda via WA 0821-1309-2518.
+Toko melayani pengantaran ke rumah pembeli. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, sebutkan alamat Anda via WA 0819-9164-7012.
 
 **Bagaimana cara pesan mebel tanpa datang ke toko?**
-Chat WA 0821-1309-2518, kirim nama atau foto barang, lalu admin mengonfirmasi stok, harga, dan ongkos antar.
+Chat WA 0819-9164-7012, kirim nama atau foto barang, lalu admin mengonfirmasi stok, harga, dan ongkos antar.
 
 **Cara bayarnya apa saja?**
-Untuk pilihan cara bayar yang berlaku saat ini, langsung tanya via WA 0821-1309-2518.
+Untuk pilihan cara bayar yang berlaku saat ini, langsung tanya via WA 0819-9164-7012.
 
 ---
 
-> Mau tanya stok, harga, area antar, atau cara bayar? Chat WhatsApp **0821-1309-2518** ([wa.me/6282113092518](https://wa.me/6282113092518)). Atau mampir langsung ke toko: Jl. Lkr. Utara, RT.08/RW.01, Dusun I, Randudongkal, Kec. Randudongkal, Kab. Pemalang, Jawa Tengah 52353. Buka tiap hari 08.00–17.00.
+> Mau tanya stok, harga, area antar, atau cara bayar? Chat WhatsApp **0819-9164-7012** ([wa.me/6281991647012](https://wa.me/6281991647012)). Atau mampir langsung ke toko: Jl. Lkr. Utara, RT.08/RW.01, Dusun I, Randudongkal, Kec. Randudongkal, Kab. Pemalang, Jawa Tengah 52353. Buka tiap hari 08.00–17.00.
 
 Lihat juga: [alamat dan kontak toko](/kontak).
 
@@ -142,7 +142,7 @@ Lihat juga: [alamat dan kontak toko](/kontak).
       "name": "Apakah bisa antar ke luar Randudongkal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Toko melayani pengantaran ke rumah pembeli. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, sebutkan alamat Anda via WA 0821-1309-2518."
+        "text": "Toko melayani pengantaran ke rumah pembeli. Untuk memastikan wilayah Anda terjangkau beserta ongkos antarnya, sebutkan alamat Anda via WA 0819-9164-7012."
       }
     },
     {
@@ -150,7 +150,7 @@ Lihat juga: [alamat dan kontak toko](/kontak).
       "name": "Bagaimana cara pesan mebel tanpa datang ke toko?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Chat WA 0821-1309-2518, kirim nama atau foto barang, lalu admin mengonfirmasi stok, harga, dan ongkos antar."
+        "text": "Chat WA 0819-9164-7012, kirim nama atau foto barang, lalu admin mengonfirmasi stok, harga, dan ongkos antar."
       }
     },
     {
@@ -158,7 +158,7 @@ Lihat juga: [alamat dan kontak toko](/kontak).
       "name": "Cara bayarnya apa saja?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Untuk pilihan cara bayar yang berlaku saat ini, langsung tanya via WA 0821-1309-2518."
+        "text": "Untuk pilihan cara bayar yang berlaku saat ini, langsung tanya via WA 0819-9164-7012."
       }
     }
   ]
