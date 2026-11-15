@@ -9,7 +9,7 @@ const WEB3FORMS_ACCESS_KEY = 'c89bffae-8713-46fc-97c8-3efc2053e404';
 const MESSAGE_MAX = 1000;
 const NAME_MAX = 120;
 const CONTACT_MAX = 120;
-const WHATSAPP_DISPLAY = '0821-1309-2518';
+const WHATSAPP_DISPLAY = '0819-9164-7012';
 
 type FieldName = 'name' | 'contact' | 'message';
 type FieldErrors = Partial<Record<FieldName, string>>;
