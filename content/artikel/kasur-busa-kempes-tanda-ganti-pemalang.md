@@ -91,7 +91,7 @@ Di Mebel Putri Jaya Randudongkal tersedia [kasur busa](/katalog/kasur-busa) deng
 
 Sudah cek dan ternyata kasur harus diganti? Silakan datang ke **Mebel Putri Jaya Randudongkal** untuk mencoba kasur langsung. Bawa catatan ukuran ranjang Anda supaya admin bisa membantu mencarikan yang pas.
 
-**Tanya stok, ukuran, dan harga terbaru via WhatsApp 0821-1309-2518.** Info pengantaran ada di artikel [Toko Mebel Pemalang, Bisa Antar](/artikel/toko-mebel-pemalang-antar), dan alamat lengkap di halaman [kontak](/kontak).
+**Tanya stok, ukuran, dan harga terbaru via WhatsApp 0819-9164-7012.** Info pengantaran ada di artikel [Toko Mebel Pemalang, Bisa Antar](/artikel/toko-mebel-pemalang-antar), dan alamat lengkap di halaman [kontak](/kontak).
 
 ## FAQ
 
@@ -108,7 +108,7 @@ Busa menyerap lembap dari udara dan keringat. Angin-anginkan kasur rutin, beri a
 Sebaiknya di tempat teduh yang berangin. Panas terik terlalu lama bisa membuat busa getas.
 
 **Di mana beli kasur busa pengganti di Randudongkal?**
-Di Mebel Putri Jaya Randudongkal Anda bisa mencoba kasur langsung. Tanya stok dan harga terbaru via WA 0821-1309-2518.
+Di Mebel Putri Jaya Randudongkal Anda bisa mencoba kasur langsung. Tanya stok dan harga terbaru via WA 0819-9164-7012.
 
 ---
 
@@ -123,7 +123,7 @@ Di Mebel Putri Jaya Randudongkal Anda bisa mencoba kasur langsung. Tanya stok da
     {"@type": "Question", "name": "Apakah kasur busa yang kempes bisa dikembalikan seperti semula?", "acceptedAnswer": {"@type": "Answer", "text": "Busa yang sudah kempes permanen tidak bisa kembali penuh. Membalik dan memutar kasur hanya membantu meratakan beban dan memperlambat kempes."}},
     {"@type": "Question", "name": "Kenapa kasur busa bau apek saat musim hujan?", "acceptedAnswer": {"@type": "Answer", "text": "Busa menyerap lembap dari udara dan keringat. Angin-anginkan kasur rutin, beri alas kalau dipakai di lantai, dan pakai pelindung kasur yang bisa dicuci."}},
     {"@type": "Question", "name": "Apakah kasur busa boleh dijemur di bawah matahari?", "acceptedAnswer": {"@type": "Answer", "text": "Sebaiknya di tempat teduh yang berangin. Panas terik terlalu lama bisa membuat busa getas."}},
-    {"@type": "Question", "name": "Di mana beli kasur busa pengganti di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Di Mebel Putri Jaya Randudongkal Anda bisa mencoba kasur langsung. Tanya stok dan harga terbaru via WA 0821-1309-2518."}}
+    {"@type": "Question", "name": "Di mana beli kasur busa pengganti di Randudongkal?", "acceptedAnswer": {"@type": "Answer", "text": "Di Mebel Putri Jaya Randudongkal Anda bisa mencoba kasur langsung. Tanya stok dan harga terbaru via WA 0819-9164-7012."}}
   ]
 }
 ```
